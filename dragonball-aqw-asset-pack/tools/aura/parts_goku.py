@@ -216,6 +216,8 @@ def _torso():
           (17.8, -118.0), (15.2, -102.0), (16.4, -92.4), (-16.4, -92.4),
           (-15.2, -102.0), (-17.8, -118.0), (-22.6, -130.0), (-27.0, -140.0)]
     ops = [
+        # pescoco: atras do gi, so a parte que sobra acima do decote aparece
+        F(capsule((0, -170.0), (0, -158.0), 12.6, 15.0), "skin"),
         F(gi, "gi"),
         # V do decote com camisa azul
         CFP([(-12.4, -160.6), (0.0, -136.2), (12.4, -160.6), (7.2, -161.4),
@@ -246,10 +248,6 @@ def _torso():
         # peitoral: sombra sob a linha do peito
         CL([(-15.8, -143.6), (-6.0, -145.2), (7.0, -144.6), (15.2, -142.0)], "gi_sh", 1.6),
         CL([(-14.2, -146.6), (-5.0, -148.0), (6.0, -147.6), (13.6, -145.2)], "gi_hi", 1.2),
-        # PESCOCO por ULTIMO (senao o gi cobre): do queixo ao decote
-        F(capsule((0, -171.0), (0, -156.0), 14.4, 17.4), "skin"),
-        CF(capsule((0, -168.6), (0, -163.4), 15.0, 16.2), "skin_sh"),
-        CL([(-6.4, -160.0), (6.4, -160.0)], "skin_sh", 1.2),
     ]
     return part("torso", J["spine"], ops, bone="spine", z=90)
 

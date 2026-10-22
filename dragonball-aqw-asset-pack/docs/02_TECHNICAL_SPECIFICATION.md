@@ -121,14 +121,14 @@ Fonte única: `standards/layer_order.json`. Valores:
 | 31 | `wings` |
 | 40 | `hair_back` |
 | 50 | `weapon_back` |
-| 60 | `upper_arm_b` |
-| 61 | `forearm_b` |
-| 62 | `hand_b` |
 | 70 | `thigh_b` |
 | 71 | `shin_b` |
 | 72 | `foot_b` |
 | 80 | `pelvis` |
 | 90 | `torso` |
+| 92 | `upper_arm_b` |
+| 93 | `forearm_b` |
+| 94 | `hand_b` |
 | 100 | `thigh_f` |
 | 101 | `shin_f` |
 | 102 | `foot_f` |

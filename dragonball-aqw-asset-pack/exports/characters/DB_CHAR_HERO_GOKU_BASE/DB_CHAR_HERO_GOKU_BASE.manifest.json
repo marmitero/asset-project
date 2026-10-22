@@ -3,7 +3,7 @@
   "asset_type": "character",
   "version": "0.1.0",
   "state": "REVIEW",
-  "created_at": "2026-10-22T20:48:32",
+  "created_at": "2026-10-22T21:18:00",
   "canvas": {
     "width": 512,
     "height": 512,
@@ -42,144 +42,144 @@
       "clip": "idle",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V01/DB_CHAR_HERO_GOKU_BASE__idle__v0.1.0.gif",
-      "bytes": 656319,
-      "sha256": "289bf17a23ed9f669cdfebd9ae1d5eb2870d9e058d6da380157c40ea21051e01"
+      "bytes": 653492,
+      "sha256": "ee819770d36012e4e7084ae9bb58d82cb90a8cf1fe65b44723842ac9890a3696"
     },
     {
       "id": "V02",
       "clip": "idle_combat",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V02/DB_CHAR_HERO_GOKU_BASE__idle_combat__v0.1.0.gif",
-      "bytes": 727204,
-      "sha256": "bf983263cd2e85f92b5eb0291f8f154012d6a1eded174ef305e4d3a6e174700d"
+      "bytes": 747898,
+      "sha256": "d10cb91e2b3ce1d46b749930348bebbac49db833500f5a7033f97eeaa2a36d2f"
     },
     {
       "id": "V03",
       "clip": "walk",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V03/DB_CHAR_HERO_GOKU_BASE__walk__v0.1.0.gif",
-      "bytes": 300136,
-      "sha256": "69e3dd818f4a1ffaeb4c68e8151b4bf82fc2e66f1bcd909c88b2a2d1f4e19e17"
+      "bytes": 302242,
+      "sha256": "f2ba2fd646f022b1519f084168804eb7bd91455623c4841582b3d7d3f6032334"
     },
     {
       "id": "V04",
       "clip": "run",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V04/DB_CHAR_HERO_GOKU_BASE__run__v0.1.0.gif",
-      "bytes": 205982,
-      "sha256": "bc634391e74a6605cd8d4e0c60cb691dbbf3ed7f256dc12d1db41fc289c605e0"
+      "bytes": 209925,
+      "sha256": "7c0817450ad46f1fd1fc0600090af651fbb0918f8cade3b453a9f5fed97b62f0"
     },
     {
       "id": "V05",
       "clip": "turn_180",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V05/DB_CHAR_HERO_GOKU_BASE__turn_180__v0.1.0.gif",
-      "bytes": 148770,
-      "sha256": "738599440de8bf2f4884c156b4d04bf4c843d2844299c1e2e3707895983bb3dc"
+      "bytes": 148449,
+      "sha256": "646241bbb1c4713974a04bb7254eb100825a1938e17c1f2b31249f83735555c9"
     },
     {
       "id": "V06",
       "clip": "jump_land",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V06/DB_CHAR_HERO_GOKU_BASE__jump_land__v0.1.0.gif",
-      "bytes": 328602,
-      "sha256": "0e5602a245543591cd5495cffde13963b0045233f5fc346469eba55a30937a8f"
+      "bytes": 333733,
+      "sha256": "f6298832cee7872d88b6266977b9c3f5bc9376df54165f207ea9e0b88be0f89e"
     },
     {
       "id": "V07",
       "clip": "attack_light_1",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V07/DB_CHAR_HERO_GOKU_BASE__attack_light_1__v0.1.0.gif",
-      "bytes": 244780,
-      "sha256": "21c2b3e8a9454cd4f7ae0b4c3e2da0b541cac09379501d6632e2d905f56752f8"
+      "bytes": 248292,
+      "sha256": "54828f4d938a5eb97de9d574d3ab517cc3c6807ea755e0d55a6f9c968898f50b"
     },
     {
       "id": "V08",
       "clip": "attack_heavy",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V08/DB_CHAR_HERO_GOKU_BASE__attack_heavy__v0.1.0.gif",
-      "bytes": 400027,
-      "sha256": "6a5a2f56dea718fee39a8e6ff994a3fdb29a568e9f057f5ecdc3ef746cd9682e"
+      "bytes": 402730,
+      "sha256": "0b5e5a53a67e66f53a594a1f50c2aecb97922b0c7a93af4a3f48d991e9e3102a"
     },
     {
       "id": "V09",
       "clip": "combo_light_3",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V09/DB_CHAR_HERO_GOKU_BASE__combo_light_3__v0.1.0.gif",
-      "bytes": 783125,
-      "sha256": "d2e6895639e2f928ce1da78404058486faf0bcb5555ca1396da98eaa5c83b4f8"
+      "bytes": 792017,
+      "sha256": "7f44526596b67beab5987340b0c570283ff57ab77a02ca8ee182e85bfdc75d12"
     },
     {
       "id": "V10",
       "clip": "cast",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V10/DB_CHAR_HERO_GOKU_BASE__cast__v0.1.0.gif",
-      "bytes": 453225,
-      "sha256": "970a1ed052a109e479e1f566ec683356b12adc447addf20241131e374bbc6a71"
+      "bytes": 455510,
+      "sha256": "d25d650b10b080c266ee96b5de65c70fb8efd15c83131fedb79e6353c460b4ca"
     },
     {
       "id": "V11",
       "clip": "attack_whiff",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V11/DB_CHAR_HERO_GOKU_BASE__attack_whiff__v0.1.0.gif",
-      "bytes": 297148,
-      "sha256": "f025eaa704087f7e889346caf57423a89e0dfa10b8fe0628e253b1b1ff0c49bb"
+      "bytes": 302283,
+      "sha256": "04ceb57a342203f52ca23e3afd3e38d2164f61541d0b4022301b064923382c94"
     },
     {
       "id": "V12",
       "clip": "evade_backstep",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V12/DB_CHAR_HERO_GOKU_BASE__evade_backstep__v0.1.0.gif",
-      "bytes": 216573,
-      "sha256": "2bb1d48f7705e5320b150da9992b47e79563a3827f07cd25ee283f7ea34ff0a3"
+      "bytes": 218381,
+      "sha256": "961aadae0dc08c5826a96877807891637241491a19a22dd827ad9dbbb40fc01d"
     },
     {
       "id": "V13",
       "clip": "attack_crit",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V13/DB_CHAR_HERO_GOKU_BASE__attack_crit__v0.1.0.gif",
-      "bytes": 366876,
-      "sha256": "751a350677c3e4ebb0270a6b21c60de592898ef3fe192e1298383a9b0d1d2897"
+      "bytes": 371209,
+      "sha256": "f76b1bc86cb943659d8a85e3a70d4af9ce06e2ac885e5dd7e71050b1a7fa1add"
     },
     {
       "id": "V14",
       "clip": "hurt_light",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V14/DB_CHAR_HERO_GOKU_BASE__hurt_light__v0.1.0.gif",
-      "bytes": 149241,
-      "sha256": "cb3a36a8b80b47391b53a349fb85b36d62e48f29bfeec827e4dd390d3cefdb15"
+      "bytes": 148543,
+      "sha256": "e3e894c03cf7042c811611b2c2e9137b8909b95f8bcf51fcc474720a6af00ead"
     },
     {
       "id": "V15",
       "clip": "hurt_crit",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V15/DB_CHAR_HERO_GOKU_BASE__hurt_crit__v0.1.0.gif",
-      "bytes": 314941,
-      "sha256": "12b313bf3b719a3dfba0853b5f40f27b601124eabdd3f72cb4b98df41912b3ed"
+      "bytes": 313375,
+      "sha256": "a98102bb63ab8003bc2e8fc326935ad1747f0d62a797687717d432be5c9d6854"
     },
     {
       "id": "V16",
       "clip": "death",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V16/DB_CHAR_HERO_GOKU_BASE__death__v0.1.0.gif",
-      "bytes": 487457,
-      "sha256": "a4c520c4cae661d6b49941b16d68347394c3cbb61f477e0e418c2c80f5832b8c"
+      "bytes": 491673,
+      "sha256": "72dad4883cacf41f4c6001f52b33c64e83eb2a990dc36b4bd950a50c9a5549c0"
     },
     {
       "id": "V17",
       "clip": "block_impact+dodge",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V17/DB_CHAR_HERO_GOKU_BASE__block_impact+dodge__v0.1.0.gif",
-      "bytes": 364425,
-      "sha256": "5fdd4d0f3cde5f79ba92eb898d3b981b9e31960582d62c0ea62c3e0fc6b9837e"
+      "bytes": 364542,
+      "sha256": "e02435202af6194e19cad4321495518397fcf9dd88af6b2324abf5e3cfb2059d"
     },
     {
       "id": "V18",
       "clip": "montage_combat",
       "type": "gif",
       "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V18/DB_CHAR_HERO_GOKU_BASE__montage_combat__v0.1.0.gif",
-      "bytes": 1589230,
-      "sha256": "f438c05ba0d81b166219c304c028f131eab223b9625d52dcfcaa4a58a22a3a32"
+      "bytes": 1620491,
+      "sha256": "0bad88145e3b601777c33dc129fd0ec81781f5529a1e03543aeaefc8dad57340"
     }
   ],
   "qa": {

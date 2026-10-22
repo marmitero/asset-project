@@ -181,11 +181,71 @@ não cápsula deslocada).
 - 18 GIFs regerados (7,7 MB, eram 6,8)
 - Comparativo em escala real: `experiments/style_v2/v1_vs_v2_1x.png`
 
-O que o v2 **não** resolveu e continua em aberto:
+O que o v2 **não** resolveu: ver §9 (aberto) e §10 (resolvido).
 
-1. **braço de trás atravessa o tronco** em poses de rotação forte — problema
-   estrutural de câmera 3/4 com rig 2D (precisa de camada de oclusão por pose,
-   não de pintura);
-2. **contato de pé** em poses de passada longa ainda lê solto (o rig pisa 4–5 px
-   abaixo da linha do chão por causa do contorno);
-3. a cabeça ainda é grande para o gosto "AQW", que usa ~1/6 do corpo.
+---
+
+## 9. Problema 1 resolvido — braço de trás (2026-10-22)
+
+### Diagnóstico
+
+A hipótese inicial era z-order. **Estava errada**: o braço de trás já era
+desenhado atrás do tronco (z 60 < 90). O defeito tinha três camadas:
+
+1. **Pose.** `attack_whiff` f14 tinha `spread_b: 26`, que levava o antebraço de
+   trás a atravessar a *lateral* do tronco. Medido: só **31,8 %** do braço
+   ficava visível — o resto estava dentro do tronco. A sobra era uma lasca bege
+   na borda esquerda, que lia como excrescência.
+2. **Geometria do rig.** O braço superior de trás tem ~33 px (ombro → cotovelo)
+   enquanto o ombro está a 25 px do eixo e o tronco tem ~20 px de meio-largura.
+   **O braço superior nunca consegue sair da silhueta do tronco em vista 3/4.**
+   Nenhuma pose resolve isso: qualquer pose que exponha o antebraço deixa o
+   braço superior enterrado, e o membro lê como desmembrado.
+3. **Decisão por peça.** Qualquer heurística que esconda peças isoladamente
+   produz membro desmembrado: o braço some e o antebraço fica flutuando.
+
+### Correção
+
+**Ordem de camadas** (`standards/layer_order.json`): o membro de trás passa a
+ser desenhado **acima do tronco**, como no AQWorlds.
+
+| slot | antes | depois |
+|---|---|---|
+| `upper_arm_b` | 60 | **92** |
+| `forearm_b` | 61 | **93** |
+| `hand_b` | 62 | **94** |
+
+O `back_darken = 0.74` continua aplicado, então o braço mantém a leitura de
+profundidade. Ele fica abaixo de `thigh_f` (100), `head` (110) e do braço da
+frente (130) — a cabeça ainda cobre o braço quando ele passa atrás dela.
+
+**Pose** (`tools/aura/clips.py`, `attack_whiff` f14): `spread_b` 26 → **40** e
+`elbow_b` −30 → **−60** — cotovelo para fora, antebraço caindo, em vez de
+atravessar a lateral do tronco.
+
+### O que foi tentado e descartado
+
+- guard de oclusão por peça (medir fração visível e esconder lascas): **removido**.
+  Calibrado por histograma chegou a apagar braço legítimo no idle e produzia
+  membro desmembrado quando só o antebraço passava do limite.
+- `spread_b` alto (60–100): resolvia a visibilidade (80–91 %) mas jogava o
+  antebraço para trás da cabeça, virando "coxa de frango" ao lado do rosto.
+- fade parcial do braço: virava braço fantasma sobre o gi no `walk`.
+
+### Verificação
+
+- 23 clipes · **0 falhas**; `validate_standards.py` 0 erros
+- contato visual conferido em `idle`, `walk`, `run`, `idle_combat`,
+  `attack_whiff` f13/f14, `attack_light_1` f8, `attack_heavy` f12, `hurt_crit`,
+  `cast`, `block_impact`, `turn_180`
+
+### Efeito colateral corrigido junto
+
+O pescoço era o **último** op de `_torso` (para o gi não cobrir), mas com a
+cabeça inclinada ele aparecia como bloco solto sobre o ombro. Passou para o
+início de `_torso` (atrás do gi), mais estreito e mais baixo: agora só aparece a
+parte acima do decote e ele conecta queixo → tronco em todas as poses.
+
+---
+
+## 10. Problemas 2 e 3 — planos

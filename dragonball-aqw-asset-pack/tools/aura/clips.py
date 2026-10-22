@@ -328,7 +328,11 @@ def attack_whiff() -> Clip:
                            "root_x": 15}),
         14: _merge(GUARD, {"lean": 34, "twist": 52, "crouch": 6,
                            "shoulder_f": -70, "elbow_f": -24,
-                           "shoulder_b": -40, "elbow_b": -30, "spread_b": 26,
+                           # braco de tras recolhido: cotovelo para fora e para
+                           # tras (spread 26->40) com antebraco caindo (elbow
+                           # -30->-60). A pose antiga cruzava o antebraco na
+                           # lateral do tronco e virava lasca bege.
+                           "shoulder_b": -40, "elbow_b": -60, "spread_b": 40,
                            "foot_fx": 30, "foot_bx": -30, "head_turn": 16,
                            "head_tilt": 10, "hair": 6, "root_x": 12}),
         17: _merge(GUARD, {"lean": 16, "twist": 24, "crouch": 10,

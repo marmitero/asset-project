@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T20:47:32",
+  "generated_at": "2026-10-22T21:17:10",
   "fps_gif": 25,
   "zoom": 1.35,
   "items": [
@@ -11,14 +11,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V01/DB_CHAR_HERO_GOKU_BASE__idle__v0.1.0.gif",
-          "bytes": 656319
+          "bytes": 653492
         }
       ],
       "id": "V01",
       "clip": "idle",
       "caption": "idle — respiracao + blink",
       "loop": true,
-      "render_s": 6.5
+      "render_s": 6.58
     },
     {
       "name": "idle_combat",
@@ -28,14 +28,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V02/DB_CHAR_HERO_GOKU_BASE__idle_combat__v0.1.0.gif",
-          "bytes": 727204
+          "bytes": 747898
         }
       ],
       "id": "V02",
       "clip": "idle_combat",
       "caption": "idle_combat — guarda",
       "loop": true,
-      "render_s": 4.37
+      "render_s": 4.24
     },
     {
       "name": "walk",
@@ -45,14 +45,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V03/DB_CHAR_HERO_GOKU_BASE__walk__v0.1.0.gif",
-          "bytes": 300136
+          "bytes": 302242
         }
       ],
       "id": "V03",
       "clip": "walk",
       "caption": "walk — 8 poses",
       "loop": true,
-      "render_s": 1.72
+      "render_s": 1.61
     },
     {
       "name": "run",
@@ -62,14 +62,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V04/DB_CHAR_HERO_GOKU_BASE__run__v0.1.0.gif",
-          "bytes": 205982
+          "bytes": 209925
         }
       ],
       "id": "V04",
       "clip": "run",
       "caption": "run — corrida com airtime",
       "loop": true,
-      "render_s": 1.2
+      "render_s": 1.15
     },
     {
       "name": "turn_180",
@@ -79,14 +79,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V05/DB_CHAR_HERO_GOKU_BASE__turn_180__v0.1.0.gif",
-          "bytes": 148770
+          "bytes": 148449
         }
       ],
       "id": "V05",
       "clip": "turn_180",
       "caption": "turn_180 — virada",
       "loop": false,
-      "render_s": 0.87
+      "render_s": 0.83
     },
     {
       "name": "jump_land",
@@ -96,14 +96,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V06/DB_CHAR_HERO_GOKU_BASE__jump_land__v0.1.0.gif",
-          "bytes": 328602
+          "bytes": 333733
         }
       ],
       "id": "V06",
       "clip": "jump_land",
       "caption": "jump_land — salto/queda/aterrissagem",
       "loop": false,
-      "render_s": 1.85
+      "render_s": 1.72
     },
     {
       "name": "attack_light_1",
@@ -113,7 +113,7 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V07/DB_CHAR_HERO_GOKU_BASE__attack_light_1__v0.1.0.gif",
-          "bytes": 244780
+          "bytes": 248292
         }
       ],
       "id": "V07",
@@ -130,14 +130,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V08/DB_CHAR_HERO_GOKU_BASE__attack_heavy__v0.1.0.gif",
-          "bytes": 400027
+          "bytes": 402730
         }
       ],
       "id": "V08",
       "clip": "attack_heavy",
       "caption": "attack_heavy — soco carregado",
       "loop": false,
-      "render_s": 2.26
+      "render_s": 2.23
     },
     {
       "name": "combo_light_3",
@@ -147,14 +147,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V09/DB_CHAR_HERO_GOKU_BASE__combo_light_3__v0.1.0.gif",
-          "bytes": 783125
+          "bytes": 792017
         }
       ],
       "id": "V09",
       "clip": "combo_light_3",
       "caption": "combo_light_3 — 3 golpes",
       "loop": false,
-      "render_s": 4.24
+      "render_s": 4.4
     },
     {
       "name": "cast",
@@ -164,14 +164,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V10/DB_CHAR_HERO_GOKU_BASE__cast__v0.1.0.gif",
-          "bytes": 453225
+          "bytes": 455510
         }
       ],
       "id": "V10",
       "clip": "cast",
       "caption": "cast — ki blast",
       "loop": false,
-      "render_s": 2.76
+      "render_s": 2.79
     },
     {
       "name": "attack_whiff",
@@ -181,14 +181,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V11/DB_CHAR_HERO_GOKU_BASE__attack_whiff__v0.1.0.gif",
-          "bytes": 297148
+          "bytes": 302283
         }
       ],
       "id": "V11",
       "clip": "attack_whiff",
       "caption": "attack_whiff — erro (miss)",
       "loop": false,
-      "render_s": 1.51
+      "render_s": 1.54
     },
     {
       "name": "evade_backstep",
@@ -198,14 +198,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V12/DB_CHAR_HERO_GOKU_BASE__evade_backstep__v0.1.0.gif",
-          "bytes": 216573
+          "bytes": 218381
         }
       ],
       "id": "V12",
       "clip": "evade_backstep",
       "caption": "evade_backstep — esquiva",
       "loop": false,
-      "render_s": 1.2
+      "render_s": 1.27
     },
     {
       "name": "attack_crit",
@@ -215,14 +215,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V13/DB_CHAR_HERO_GOKU_BASE__attack_crit__v0.1.0.gif",
-          "bytes": 366876
+          "bytes": 371209
         }
       ],
       "id": "V13",
       "clip": "attack_crit",
       "caption": "attack_crit — critico",
       "loop": false,
-      "render_s": 1.93
+      "render_s": 1.86
     },
     {
       "name": "hurt_light",
@@ -232,14 +232,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V14/DB_CHAR_HERO_GOKU_BASE__hurt_light__v0.1.0.gif",
-          "bytes": 149241
+          "bytes": 148543
         }
       ],
       "id": "V14",
       "clip": "hurt_light",
       "caption": "hurt_light — dano leve",
       "loop": false,
-      "render_s": 0.84
+      "render_s": 0.85
     },
     {
       "name": "hurt_crit",
@@ -249,14 +249,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V15/DB_CHAR_HERO_GOKU_BASE__hurt_crit__v0.1.0.gif",
-          "bytes": 314941
+          "bytes": 313375
         }
       ],
       "id": "V15",
       "clip": "hurt_crit",
       "caption": "hurt_crit — dano critico",
       "loop": false,
-      "render_s": 1.67
+      "render_s": 1.65
     },
     {
       "name": "death",
@@ -266,14 +266,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V16/DB_CHAR_HERO_GOKU_BASE__death__v0.1.0.gif",
-          "bytes": 487457
+          "bytes": 491673
         }
       ],
       "id": "V16",
       "clip": "death",
       "caption": "death — morte",
       "loop": false,
-      "render_s": 2.54
+      "render_s": 2.48
     },
     {
       "name": "block_impact+dodge",
@@ -283,14 +283,14 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V17/DB_CHAR_HERO_GOKU_BASE__block_impact+dodge__v0.1.0.gif",
-          "bytes": 364425
+          "bytes": 364542
         }
       ],
       "id": "V17",
       "clip": "block_impact+dodge",
       "caption": "block_impact + dodge",
       "loop": false,
-      "render_s": 1.89
+      "render_s": 1.87
     },
     {
       "name": "montage_combat",
@@ -300,15 +300,15 @@
         {
           "type": "gif",
           "path": "/home/user/asset-project/dragonball-aqw-asset-pack/exports/characters/DB_CHAR_HERO_GOKU_BASE/previews/V18/DB_CHAR_HERO_GOKU_BASE__montage_combat__v0.1.0.gif",
-          "bytes": 1589230
+          "bytes": 1620491
         }
       ],
       "id": "V18",
       "clip": "montage_combat",
       "caption": "montage_combat — resumo jogavel",
       "loop": true,
-      "render_s": 8.79
+      "render_s": 8.56
     }
   ],
-  "total_s": 47.6
+  "total_s": 47.0
 }

@@ -460,19 +460,19 @@
     {
       "slot": "upper_arm_b",
       "bone": "upper_arm_b",
-      "layer": 60,
+      "layer": 92,
       "attachment": null
     },
     {
       "slot": "forearm_b",
       "bone": "forearm_b",
-      "layer": 61,
+      "layer": 93,
       "attachment": null
     },
     {
       "slot": "hand_b",
       "bone": "hand_b",
-      "layer": 62,
+      "layer": 94,
       "attachment": null
     },
     {

@@ -142,14 +142,14 @@ O pivô de um attachment **coincide com a junta** do osso que o anima. A peça �
 | `wings` | 31 | `chest` | equip | não |
 | `hair_back` | 40 | `hair_back_01` | corpo | sim* |
 | `weapon_back` | 50 | `hand_b` | equip | não |
-| `upper_arm_b` | 60 | `upper_arm_b` | corpo | sim |
-| `forearm_b` | 61 | `forearm_b` | corpo | sim |
-| `hand_b` | 62 | `hand_b` | corpo | sim |
 | `thigh_b` | 70 | `thigh_b` | corpo | sim |
 | `shin_b` | 71 | `shin_b` | corpo | sim |
 | `foot_b` | 72 | `foot_b` | corpo | sim |
 | `pelvis` | 80 | `pelvis` | corpo | sim |
 | `torso` | 90 | `chest` | corpo | sim |
+| `upper_arm_b` | 92 | `upper_arm_b` | corpo | sim |
+| `forearm_b` | 93 | `forearm_b` | corpo | sim |
+| `hand_b` | 94 | `hand_b` | corpo | sim |
 | `thigh_f` | 100 | `thigh_f` | corpo | sim |
 | `shin_f` | 101 | `shin_f` | corpo | sim |
 | `foot_f` | 102 | `foot_f` | corpo | sim |
