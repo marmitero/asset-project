@@ -249,3 +249,20 @@ parte acima do decote e ele conecta queixo → tronco em todas as poses.
 ---
 
 ## 10. Problemas 2 e 3 — planos
+
+Ver **`docs/22_PLANO_PROBLEMAS_2_3.md`** (plano detalhado, medido, não implementado).
+Resumo:
+
+- **Problema 2 (contato do pé):** a documentação anterior estava errada — o rig
+  não afunda 4–5 px, ele **flutua 6–8 px no `land`** e 4 px no `turn_180`. A
+  causa é que `ground_clamp` planta o pixel mais baixo do sprite (que em `land`
+  é o joelho) e o pé é FK. Plano em 6 etapas: offset da sola calculado → campo
+  `plant` por keyframe → IK de 2 ossos no pé plantado → clamp restrito a clipes
+  aéreos → limites novos no validador → regenerar.
+- **Problema 3 (cabeça):** razão medida 4,78–4,98 contra alvo ~6,0 do AQW;
+  cabeça 46 px contra 36,7 px ideais. A causa não é o número, é que todas as ops
+  faciais são px absolutos sem uma constante `HEAD_H`. Plano em 5 etapas:
+  parametrizar (sem mudança visual) → fechar o stack vertical em frações →
+  46 → 42 → decisão do usuário → 38 px → reduzir espinhos do cabelo.
+
+---

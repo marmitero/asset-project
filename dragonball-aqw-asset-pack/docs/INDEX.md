@@ -32,7 +32,8 @@
 | `matrix/FREEZE_CHECKLIST.md` | ritual de congelamento |
 | `matrix/FROZEN_MATRIX_TEMPLATE.json` | template do certificado (não preenchido) |
 | `matrix/EXCEPTIONS.md` | registro de exceções |
-| `21_ART_DIRECTION_AI_VS_VECTOR.md` | direção de arte: IA vs vetor — evidência medida (D7) |
+| `21_ART_DIRECTION_AI_VS_VECTOR.md` | direção de arte: IA vs vetor — evidência medida (D7); §9 problema 1 resolvido |
+| `22_PLANO_PROBLEMAS_2_3.md` | plano (não implementado) do contato do pé e da proporção da cabeça |
 
 ## Ordem de leitura recomendada
 
