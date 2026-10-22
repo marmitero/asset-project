@@ -32,6 +32,7 @@
 | `matrix/FREEZE_CHECKLIST.md` | ritual de congelamento |
 | `matrix/FROZEN_MATRIX_TEMPLATE.json` | template do certificado (não preenchido) |
 | `matrix/EXCEPTIONS.md` | registro de exceções |
+| `21_ART_DIRECTION_AI_VS_VECTOR.md` | direção de arte: IA vs vetor — evidência medida (D7) |
 
 ## Ordem de leitura recomendada
 
@@ -39,4 +40,4 @@
 **Para produzir arte:** `01` → `02` → `03` → `04` → `05` → `20`.
 **Para integrar em engine:** `02` → `03` → `11` → `17`.
 **Para desenhar o jogo:** `16` → `15` → `09` → `08`.
-**Para expandir com IA:** `17` → `10` → `standards/*.json` → `12`.
+**Para expandir com IA:** `17` → `10` → `standards/*.json` → `12`. **Antes de decidir sobre IA, leia `21`.**
