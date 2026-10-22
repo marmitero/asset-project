@@ -1,0 +1,162 @@
+{
+  "version": "1.0.0",
+  "rules": {
+    "max_colors_per_design": 8,
+    "max_colors_per_weapon": 5,
+    "max_colors_per_icon": 6,
+    "max_colors_per_env_layer": 12,
+    "ramp": {
+      "shadow_multiplier_l": 0.72,
+      "shadow_saturation_multiplier": 1.05,
+      "shadow_hue_shift_deg": -4,
+      "highlight_l": "L + 0.22*(1-L)",
+      "highlight_saturation_multiplier": 0.95,
+      "highlight_hue_shift_deg": 3,
+      "deep_multiplier_l": 0.48
+    },
+    "outline": "#0E0B12",
+    "back_limb_multiplier": 0.82,
+    "forbidden": ["gradient_smooth", "photo_texture", "pure_black_shadow", "pure_white_cloth_highlight"]
+  },
+  "characters": {
+    "goku": {
+      "skin": {"base": "#F6C9A0", "shadow": "#D79A72", "highlight": "#FFE1C4"},
+      "gi_primary": {"base": "#F08A2E", "shadow": "#C25E16", "highlight": "#FFB65C"},
+      "gi_secondary": {"base": "#2F4FA8", "shadow": "#1B2F6B", "highlight": "#5B7AD6"},
+      "belt": {"base": "#E8D9B8", "shadow": "#B9A47E", "highlight": "#FFF3D6"},
+      "hair": {"base": "#17121C", "shadow": "#0B0810", "highlight": "#3A3244"},
+      "eyes": {"base": "#1A1A22", "iris": "#2E2A34", "sclera": "#F7F2EA"},
+      "boots": {"base": "#2F4FA8", "shadow": "#1B2F6B", "highlight": "#5B7AD6", "sole": "#E8D9B8"},
+      "locked": ["gi_primary", "gi_secondary", "hair"]
+    },
+    "vegeta": {
+      "skin": {"base": "#F6C9A0", "shadow": "#D79A72", "highlight": "#FFE1C4"},
+      "armor": {"base": "#EDEDEA", "shadow": "#B9BCC4", "highlight": "#FFFFFF"},
+      "suit": {"base": "#243A7A", "shadow": "#16244C", "highlight": "#3E5CA8"},
+      "shoulders": {"base": "#D9A441", "shadow": "#8A5E17", "highlight": "#F2CF7A"},
+      "hair": {"base": "#17121C", "shadow": "#0B0810", "highlight": "#3A3244"},
+      "gloves": {"base": "#EDEDEA", "shadow": "#B9BCC4", "highlight": "#FFFFFF"},
+      "boots": {"base": "#EDEDEA", "shadow": "#B9BCC4", "highlight": "#FFFFFF"}
+    },
+    "gohan": {
+      "skin": {"base": "#F6C9A0", "shadow": "#D79A72", "highlight": "#FFE1C4"},
+      "gi_primary": {"base": "#7B3FA0", "shadow": "#54266F", "highlight": "#A566C6"},
+      "gi_secondary": {"base": "#C0392B", "shadow": "#8A2620", "highlight": "#E86A5C"},
+      "hair": {"base": "#17121C", "shadow": "#0B0810", "highlight": "#3A3244"},
+      "boots": {"base": "#7B3FA0", "shadow": "#54266F", "highlight": "#A566C6"}
+    },
+    "piccolo": {
+      "skin": {"base": "#4E9B4A", "shadow": "#2F6B32", "highlight": "#7FC177"},
+      "gi_primary": {"base": "#5B2E7A", "shadow": "#3B1A52", "highlight": "#8348A8"},
+      "cape": {"base": "#EDEAE1", "shadow": "#BDB9AC", "highlight": "#FFFFFF"},
+      "turban": {"base": "#EDEAE1", "shadow": "#BDB9AC", "highlight": "#FFFFFF"},
+      "patches": {"base": "#D98A9A", "shadow": "#A85C6C", "highlight": "#F2B8C4"},
+      "locked": ["skin"]
+    },
+    "trunks": {
+      "skin": {"base": "#F6C9A0", "shadow": "#D79A72", "highlight": "#FFE1C4"},
+      "jacket": {"base": "#2E3A4E", "shadow": "#1B2433", "highlight": "#4D5F7A"},
+      "shirt": {"base": "#2F4FA8", "shadow": "#1B2F6B", "highlight": "#5B7AD6"},
+      "hair": {"base": "#8FB8D8", "shadow": "#5F88A8", "highlight": "#C9E8FF"},
+      "sword": {"base": "#C9CED8", "shadow": "#8A909C", "highlight": "#FFFFFF", "grip": "#5B2E7A"}
+    },
+    "kuririn": {
+      "skin": {"base": "#F6C9A0", "shadow": "#D79A72", "highlight": "#FFE1C4"},
+      "gi_primary": {"base": "#E57A2A", "shadow": "#B85714", "highlight": "#FFAA5C"},
+      "gi_secondary": {"base": "#2F4FA8", "shadow": "#1B2F6B", "highlight": "#5B7AD6"},
+      "eyes": {"sclera": "#F7F2EA", "iris": "#1A1A22"}
+    },
+    "bulma": {
+      "skin": {"base": "#F6C9A0", "shadow": "#D79A72", "highlight": "#FFE1C4"},
+      "hair": {"base": "#2E6FA8", "shadow": "#1B4A75", "highlight": "#68A8D8"},
+      "top": {"base": "#E9E4D8", "shadow": "#BDB8A8", "highlight": "#FFFFFF"},
+      "pants": {"base": "#2E3A4E", "shadow": "#1B2433", "highlight": "#4D5F7A"}
+    },
+    "frieza": {
+      "skin": {"base": "#F2F3F5", "shadow": "#C3C7CE", "highlight": "#FFFFFF"},
+      "bio_gems": {"base": "#6C3FA0", "shadow": "#452568", "highlight": "#A56FD8"},
+      "eyes": {"base": "#C81E2E", "shadow": "#7E0F1B", "highlight": "#FF6A78"},
+      "golden": {"base": "#F2C14E", "shadow": "#B98A1E", "highlight": "#FFF0A8"},
+      "locked": ["skin", "bio_gems"]
+    },
+    "cell": {
+      "skin": {"base": "#3E8C3A", "shadow": "#245C25", "highlight": "#6DBB5E"},
+      "spots": {"base": "#141414", "shadow": "#0A0A0A", "highlight": "#2E2E2E"},
+      "accent": {"base": "#6C3FA0", "shadow": "#452568", "highlight": "#A56FD8"},
+      "wings": {"base": "#2E2E2E", "shadow": "#161616", "highlight": "#4A4A4A"}
+    },
+    "majin_buu": {
+      "skin": {"base": "#F09AD0", "shadow": "#C46AA6", "highlight": "#FFC7E8"},
+      "pants": {"base": "#F4EFE6", "shadow": "#C9C2B4", "highlight": "#FFFFFF"},
+      "cape": {"base": "#5B2E7A", "shadow": "#3B1A52", "highlight": "#8348A8"},
+      "gold": {"base": "#D9A441", "shadow": "#8A5E17", "highlight": "#FFE9A8"}
+    },
+    "beerus": {
+      "skin": {"base": "#6C4A9A", "shadow": "#4A2F6E", "highlight": "#9268C4"},
+      "armor": {"base": "#2A2038", "shadow": "#160F22", "highlight": "#4A3A60"},
+      "gold": {"base": "#D9A441", "shadow": "#8A5E17", "highlight": "#FFE9A8"},
+      "eyes": {"base": "#F2D34A", "shadow": "#B8960F", "highlight": "#FFF3A8"}
+    },
+    "broly": {
+      "skin": {"base": "#F0C29A", "shadow": "#C99468", "highlight": "#FFDCC0"},
+      "armor": {"base": "#2E3A4E", "shadow": "#1B2433", "highlight": "#4D5F7A"},
+      "fur": {"base": "#6B4A2E", "shadow": "#4A321C", "highlight": "#8F6A44"},
+      "hair_lssj": {"base": "#B8D94A", "shadow": "#7E9A1E", "highlight": "#E8FF9A"}
+    }
+  },
+  "forms": {
+    "base": {"hair": "#17121C", "hair_shadow": "#0B0810", "hair_highlight": "#3A3244", "eyes": "#2E2A34", "aura_core": null, "aura_outer": null},
+    "ssj1": {"hair": "#F7D24A", "hair_shadow": "#C79A1E", "hair_highlight": "#FFF0A8", "eyes": "#2FBF9E", "aura_core": "#FFFBE0", "aura_outer": "#FFD84D"},
+    "ssj2": {"hair": "#FFDF5C", "hair_shadow": "#D1A321", "hair_highlight": "#FFF6C4", "eyes": "#2FBF9E", "aura_core": "#FFFDF0", "aura_outer": "#FFE066"},
+    "ssj3": {"hair": "#FFE06A", "hair_shadow": "#C99C1C", "hair_highlight": "#FFF9D6", "eyes": "#2FBF9E", "aura_core": "#FFFDF0", "aura_outer": "#FFE066"},
+    "ssg": {"hair": "#D94F6E", "hair_shadow": "#A32E4C", "hair_highlight": "#F58FA6", "eyes": "#D94F6E", "aura_core": "#FFD9E2", "aura_outer": "#E8405F"},
+    "ssb": {"hair": "#4FC3F7", "hair_shadow": "#1E79B8", "hair_highlight": "#B9ECFF", "eyes": "#4FC3F7", "aura_core": "#E8FBFF", "aura_outer": "#35B8FF"},
+    "ssbe": {"hair": "#2E8FE0", "hair_shadow": "#145C9B", "hair_highlight": "#8FD3FF", "eyes": "#2E8FE0", "aura_core": "#E0F6FF", "aura_outer": "#1E78FF"},
+    "ui_sign": {"hair": "#2B2F3A", "hair_shadow": "#151823", "hair_highlight": "#565E70", "eyes": "#C9D6EE", "aura_core": "#DCE8FF", "aura_outer": "#8FB8FF"},
+    "ui": {"hair": "#D8DEE8", "hair_shadow": "#98A2B4", "hair_highlight": "#FFFFFF", "eyes": "#D8DEE8", "aura_core": "#FFFFFF", "aura_outer": "#C9E4FF"},
+    "rose": {"hair": "#F08CB4", "hair_shadow": "#B84E7C", "hair_highlight": "#FFC3D8", "eyes": "#F08CB4", "aura_core": "#FFE8F0", "aura_outer": "#FF6FA5"},
+    "golden": {"hair": "#F2C14E", "hair_shadow": "#B98A1E", "hair_highlight": "#FFF0A8", "eyes": "#C81E2E", "aura_core": "#FFF4C2", "aura_outer": "#FFB92E"},
+    "beast": {"hair": "#E8EDF5", "hair_shadow": "#A9B6CC", "hair_highlight": "#FFFFFF", "eyes": "#C81E2E", "aura_core": "#FFFFFF", "aura_outer": "#7FD4FF"},
+    "ultra_ego": {"hair": "#6C2E8A", "hair_shadow": "#451A5C", "hair_highlight": "#A56FD8", "eyes": "#B44BE0", "aura_core": "#E8C4FF", "aura_outer": "#8E5BD9"}
+  },
+  "elements": {
+    "ki_standard": {"core": "#FFFFFF", "mid": "#FFD84D", "edge": "#FF9A1E", "blend": "add"},
+    "ki_blue": {"core": "#FFFFFF", "mid": "#5CC8FF", "edge": "#1E78FF", "blend": "add"},
+    "ki_divine": {"core": "#FFFFFF", "mid": "#C9A6FF", "edge": "#8E5BD9", "blend": "add"},
+    "fire": {"core": "#FFF3C4", "mid": "#FFB020", "edge": "#E03A12", "blend": "add"},
+    "ice": {"core": "#FFFFFF", "mid": "#A8E4FF", "edge": "#3A9FD8", "blend": "add"},
+    "dark": {"core": "#3A1B4A", "mid": "#6C2E8A", "edge": "#B44BE0", "blend": "normal"},
+    "holy": {"core": "#FFFFFF", "mid": "#FFF2B8", "edge": "#F2C14E", "blend": "add"},
+    "electric": {"core": "#FFFFFF", "mid": "#B9ECFF", "edge": "#2E8FE0", "blend": "add"},
+    "chaos": {"core": "#FFFFFF", "mid": "#FF6FA5", "edge": "#6C2E8A", "blend": "add"},
+    "poison": {"core": "#E8FFC4", "mid": "#8FD94A", "edge": "#3E8C3A", "blend": "add"}
+  },
+  "ui": {
+    "bg": "#171A22",
+    "panel": "#232734",
+    "panel_hover": "#2E3446",
+    "gold": "#D9A441",
+    "gold_light": "#F2CF7A",
+    "gold_shadow": "#8A5E17",
+    "text": "#F2E9D8",
+    "text_muted": "#A9A28C",
+    "hp": "#D7382F",
+    "hp_light": "#FF6A5E",
+    "ki": "#2F80D8",
+    "ki_light": "#6FB6FF",
+    "xp": "#8E5BD9",
+    "heal": "#3FBF6A",
+    "danger": "#C0392B",
+    "rarity": {"common": "#8A8F9A", "uncommon": "#3FBF6A", "rare": "#2F80D8", "epic": "#8E5BD9", "legendary": "#D9A441"}
+  },
+  "biomes": {
+    "forest_day": {"sky": "#8FC5E8", "shadow": "#2F4A2A", "accent": "#B7D98A", "ground": "#5A7A3A"},
+    "island": {"sky": "#7FC8F0", "shadow": "#2A5A6A", "accent": "#F2D9A0", "ground": "#D9C08A"},
+    "city": {"sky": "#9AB6D8", "shadow": "#2E3446", "accent": "#E8D9B8", "ground": "#8A8F9A"},
+    "arena": {"sky": "#B9D4E8", "shadow": "#6B5138", "accent": "#D9B77A", "ground": "#B09A6A"},
+    "namek": {"sky": "#7FD9B0", "shadow": "#1E4A4A", "accent": "#B8F0D8", "ground": "#3E7A6A"},
+    "cell_games": {"sky": "#E8C99A", "shadow": "#5A4430", "accent": "#F2E0B8", "ground": "#A88A5A"},
+    "beerus": {"sky": "#3A2A5A", "shadow": "#1A1230", "accent": "#C99AE8", "ground": "#4A3A6A"},
+    "top": {"sky": "#1A2038", "shadow": "#0E1220", "accent": "#F2D9A0", "ground": "#2E3446"}
+  }
+}

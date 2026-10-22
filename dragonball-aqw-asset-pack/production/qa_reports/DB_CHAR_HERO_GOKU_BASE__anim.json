@@ -1,0 +1,2325 @@
+{
+  "validator": "validate_animation.py",
+  "version": "1.0.0",
+  "limits": {
+    "joint_gap_px": 0,
+    "pivot_drift_px": 0.25,
+    "foot_slip_px": 2.0,
+    "foot_slip_raw_px": 12.0,
+    "foot_float_px": 1.5,
+    "loop_seam_deg": 0.5,
+    "loop_seam_px": 0.5,
+    "loop_seam_pixel_pct": 2.0,
+    "jitter_reversals": 3,
+    "hold_max_frames": 6,
+    "canvas_overflow_px": 8,
+    "dirty_alpha_pct": 0.25
+  },
+  "clips": [
+    {
+      "clip": "idle",
+      "frames": 96,
+      "sampled": 96,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 0.0,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.0,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 190,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": 0.65,
+          "limit": 2.0,
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 0.3,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 1,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 5,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.058,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "idle_combat",
+      "frames": 72,
+      "sampled": 72,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 0.31,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.41,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 116,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": 1.53,
+          "limit": 2.0,
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 1.6,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.121,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "walk",
+      "frames": 24,
+      "sampled": 24,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 1.01,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 5.44,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.0,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 24,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": 0.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 6.2,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.107,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "run",
+      "frames": 16,
+      "sampled": 16,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 1.75,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 11.48,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.0,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 16,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": 0.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 16.8,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.091,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "turn_180",
+      "frames": 12,
+      "sampled": 12,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 3.75,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.02,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 3,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "shin_f",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 28.57,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 2,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.109,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "jump_start",
+      "frames": 8,
+      "sampled": 8,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 0.0,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.48,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 5,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 26.32,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.093,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "fall",
+      "frames": 8,
+      "sampled": 8,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 0.0,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.0,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 0,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": 0.0,
+          "limit": 0.5,
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": 1.74,
+          "limit": 2.0,
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 5.53,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.087,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "land",
+      "frames": 10,
+      "sampled": 10,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 0.0,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.0,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 0,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 17.98,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.077,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "jump_land",
+      "frames": 26,
+      "sampled": 26,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 0.0,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.4,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 4,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 21.74,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.089,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "dodge",
+      "frames": 16,
+      "sampled": 16,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.67,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 2.44,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.11,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 9,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "thigh_f",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 26.28,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 1,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.077,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "evade_backstep",
+      "frames": 16,
+      "sampled": 16,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.67,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 2.44,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.11,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 9,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "thigh_f",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 26.28,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 1,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.092,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "block_impact",
+      "frames": 10,
+      "sampled": 10,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 1.0,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 1.63,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.0,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 18,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 7.7,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.099,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "attack_light_1",
+      "frames": 18,
+      "sampled": 18,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 1.41,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 9.78,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.12,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 20,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 39.73,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.079,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "attack_light_2",
+      "frames": 20,
+      "sampled": 20,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 1.38,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 7.88,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.4,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 23,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "upper_arm_f",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 11.63,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 2,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.068,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "attack_light_3",
+      "frames": 22,
+      "sampled": 22,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.27,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 2.62,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.28,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 8,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 29.49,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.093,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "combo_light_3",
+      "frames": 60,
+      "sampled": 60,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 1.5,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 9.78,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.3,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 39,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "upper_arm_f",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 39.73,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 2,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.082,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "attack_heavy",
+      "frames": 30,
+      "sampled": 30,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.94,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 11.81,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 1.37,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 34,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 27.61,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.078,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "attack_crit",
+      "frames": 24,
+      "sampled": 24,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 1.12,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 23.75,
+          "limit": 12.0,
+          "pass": false
+        },
+        "foot_float_px": {
+          "value": 1.48,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 27,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 24.03,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.077,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "attack_whiff",
+      "frames": 20,
+      "sampled": 20,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 1.78,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 8.53,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.91,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 22,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "thigh_f",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 28.54,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 1,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.081,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "cast",
+      "frames": 36,
+      "sampled": 36,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.4,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 7.22,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.0,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 70,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "thigh_f",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 20.3,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 1,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.106,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "hurt_light",
+      "frames": 12,
+      "sampled": 12,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.43,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 1.25,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.0,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 22,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 35.94,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.076,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "hurt_crit",
+      "frames": 24,
+      "sampled": 24,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.42,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 3.17,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.88,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 19,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "-",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 34.0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 0,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.097,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    },
+    {
+      "clip": "death",
+      "frames": 40,
+      "sampled": 40,
+      "metrics": {
+        "joint_gap_px": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "pivot_drift_px": {
+          "value": 0.0,
+          "limit": 0.25,
+          "pass": true
+        },
+        "foot_slip_px": {
+          "value": 0.26,
+          "limit": 2.0,
+          "pass": true
+        },
+        "foot_slip_raw_px": {
+          "value": 7.5,
+          "limit": 12.0,
+          "pass": true
+        },
+        "foot_float_px": {
+          "value": 0.0,
+          "limit": 1.5,
+          "pass": true
+        },
+        "contact_samples": {
+          "value": 22,
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_deg": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_px": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "loop_seam_pixel_pct": {
+          "value": "n/a",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_bone": {
+          "value": "shin_f",
+          "limit": "-",
+          "pass": true
+        },
+        "jitter_residual_deg": {
+          "value": 30.41,
+          "limit": "informativo",
+          "pass": true
+        },
+        "jitter_reversals": {
+          "value": 1,
+          "limit": 3,
+          "pass": true
+        },
+        "holds": {
+          "value": 0,
+          "limit": "informativo",
+          "pass": true
+        },
+        "hold_max_len": {
+          "value": 0,
+          "limit": 6,
+          "pass": true
+        },
+        "duplicate_runs_over_limit": {
+          "value": 0,
+          "limit": 0,
+          "pass": true
+        },
+        "layer_order": {
+          "value": "ok",
+          "limit": "exato",
+          "pass": true
+        },
+        "canvas_overflow_px": {
+          "value": 0,
+          "limit": 8,
+          "pass": true
+        },
+        "dirty_alpha_pct": {
+          "value": 0.072,
+          "limit": 0.25,
+          "pass": true
+        }
+      },
+      "errors": [],
+      "warnings": [],
+      "pass": true
+    }
+  ],
+  "summary": {
+    "clips": 23,
+    "errors": 0,
+    "pass": true
+  }
+}

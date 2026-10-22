@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aura.local/schemas/asset_manifest.schema.json",
+  "title": "AURA Asset Manifest",
+  "type": "object",
+  "required": ["pack", "version", "matrix_version", "generated_at", "assets"],
+  "properties": {
+    "pack": {"const": "dragonball-aqw-asset-pack"},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "matrix_version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "assets": {"type": "array", "items": {"$ref": "#/definitions/asset"}},
+    "atlases": {"type": "array", "items": {"type": "object"}},
+    "stats": {
+      "type": "object",
+      "properties": {
+        "characters": {"type": "integer", "minimum": 0},
+        "equipment": {"type": "integer", "minimum": 0},
+        "enemies": {"type": "integer", "minimum": 0},
+        "pets": {"type": "integer", "minimum": 0},
+        "vfx": {"type": "integer", "minimum": 0},
+        "maps": {"type": "integer", "minimum": 0},
+        "ui": {"type": "integer", "minimum": 0},
+        "icons": {"type": "integer", "minimum": 0}
+      }
+    }
+  },
+  "definitions": {
+    "asset": {
+      "type": "object",
+      "required": ["asset_id", "name", "category", "version", "status", "files"],
+      "properties": {
+        "asset_id": {"type": "string", "pattern": "^DB_[A-Z0-9]+(_[A-Z0-9]+){2,5}$"},
+        "name": {"type": "string"},
+        "category": {"type": "string"},
+        "subcategory": {"type": "string"},
+        "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "status": {
+          "enum": ["PLANNED", "GENERATED", "PROCESSING", "QA_PENDING", "APPROVED", "REWORK_REQUIRED", "BLOCKED", "DEPRECATED"]
+        },
+        "session": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "rig": {"type": "string"},
+        "rig_version": {"type": "string"},
+        "matrix_version": {"type": "string"},
+        "height_px": {"type": "integer"},
+        "canvas": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+        "ground_y": {"type": "integer"},
+        "palette_ref": {"type": "string"},
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["path", "type"],
+            "properties": {
+              "path": {"type": "string"},
+              "type": {"enum": ["part", "timeline", "preview", "icon", "portrait", "atlas", "mask", "map", "nine_slice", "other"]},
+              "pivot": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+              "layer": {"type": "integer"}
+            }
+          }
+        },
+        "animations": {"type": "array", "items": {"type": "string"}},
+        "sockets": {"type": "array", "items": {"type": "string"}},
+        "masks": {"type": "array", "items": {"type": "string"}},
+        "hurtbox": {
+          "type": "object",
+          "properties": {
+            "type": {"enum": ["ellipse", "rect", "capsule"]},
+            "size": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2}
+          }
+        },
+        "tags": {"type": "array", "items": {"type": "string"}},
+        "license_note": {"type": "string"},
+        "checksums": {"type": "object", "additionalProperties": {"type": "string"}}
+      }
+    }
+  }
+}

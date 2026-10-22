@@ -1,0 +1,19 @@
+{
+  "pack": "dragonball-aqw-asset-pack",
+  "version": "0.1.0",
+  "matrix_version": "0.0.0",
+  "generated_at": "2026-10-22T00:00:00Z",
+  "assets": [],
+  "atlases": [],
+  "stats": {
+    "characters": 0,
+    "equipment": 0,
+    "enemies": 0,
+    "pets": 0,
+    "vfx": 0,
+    "maps": 0,
+    "ui": 0,
+    "icons": 0
+  },
+  "note": "Manifesto vazio por design: nenhum asset de arte foi aprovado ainda. Fase 1 = documentacao."
+}

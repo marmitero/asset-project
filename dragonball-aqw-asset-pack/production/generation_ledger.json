@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "policy": {
+    "max_image_generations_per_session": 10,
+    "new_assets_target": [
+      6,
+      8
+    ],
+    "reserved_for_corrections": [
+      2,
+      4
+    ],
+    "engineering_sessions_do_not_consume_image_budget": true
+  },
+  "sessions": [
+    {
+      "id": "S00",
+      "date": "2026-10-22",
+      "phase": "0 - Audit",
+      "objective": "Ler os tres documentos, auditar ferramentas e decidir a arquitetura do pipeline",
+      "image_generations": {
+        "planned": 0,
+        "executed": 0,
+        "reserved": 0
+      },
+      "assets_created": [],
+      "assets_approved": [],
+      "assets_rejected": [],
+      "notes": "Sem geracao de imagem. Auditoria: Python 3.11.2, Pillow 13.0.0, NumPy 2.4.6, ImageMagick 6.9.11, Node 22. Sem ffmpeg/cairo/inkscape/blender."
+    },
+    {
+      "id": "S01",
+      "date": "2026-10-22",
+      "phase": "1 - Documentation",
+      "objective": "Produzir Visual Bible, especificacao tecnica, padrao de animacao, protocolo de fluidez, padroes por categoria, schemas e planejamento",
+      "image_generations": {
+        "planned": 0,
+        "executed": 0,
+        "reserved": 0
+      },
+      "assets_created": [
+        "docs/00_PROJECT_CHARTER.md",
+        "docs/01_VISUAL_BIBLE.md",
+        "docs/02_TECHNICAL_SPECIFICATION.md",
+        "docs/03_ANATOMY_RIG_PAPERDOLL.md",
+        "docs/04_ANIMATION_STANDARD.md",
+        "docs/05_FLUIDITY_AND_GIF_VALIDATION.md",
+        "docs/06_EQUIPMENT_STANDARD.md",
+        "docs/07_VFX_STANDARD.md",
+        "docs/08_ENVIRONMENT_STANDARD.md",
+        "docs/09_UI_STANDARD.md",
+        "docs/10_NAMING_AND_METADATA.md",
+        "docs/11_INTEGRATION_GUIDE.md",
+        "docs/12_QUALITY_GATES.md",
+        "docs/13_PIPELINE_AND_TOOLING.md",
+        "docs/14_ROADMAP_AND_SESSIONS.md",
+        "docs/15_CHARACTER_CATALOG.md",
+        "docs/16_GAME_BLUEPRINT.md",
+        "docs/17_AI_AGENT_HANDBOOK.md",
+        "docs/18_GLOSSARY.md",
+        "docs/19_RESEARCH_AQW_TEARDOWN.md",
+        "standards/canvas_and_scale.json",
+        "standards/layer_order.json",
+        "standards/skeleton_humanoid.json",
+        "standards/palette_master.json",
+        "standards/clip_matrix.json",
+        "standards/easing_library.json",
+        "standards/rig.schema.json",
+        "standards/animation.schema.json",
+        "standards/asset_manifest.schema.json",
+        "standards/naming.json",
+        "docs/INDEX.md",
+        "docs/matrix/FREEZE_CHECKLIST.md",
+        "docs/matrix/FROZEN_MATRIX_TEMPLATE.json",
+        "docs/matrix/EXCEPTIONS.md",
+        "tools/validate_standards.py",
+        "tools/benchmark_render.py",
+        "tools/README.md",
+        "README.md",
+        "VERSION.md",
+        "LICENSE_NOTES.md",
+        "requirements.txt",
+        "asset_manifest.json",
+        "production/generation_ledger.json",
+        "production/continuity_state.json",
+        "production/production_backlog.json",
+        "production/asset_registry.json"
+      ],
+      "assets_approved": [],
+      "assets_rejected": [],
+      "notes": "Gate G0 concluido. Nenhum asset de arte; nenhuma geracao de imagem."
+    },
+    {
+      "session": "S02",
+      "date": "2026-10-22",
+      "title": "Primeiro modelo renderizado + validacao por GIF",
+      "image_generations": 0,
+      "tools_created": [
+        "tools/aura/core.py",
+        "tools/aura/shapes.py",
+        "tools/aura/pose.py",
+        "tools/aura/rig.py",
+        "tools/aura/anim.py",
+        "tools/aura/clips.py",
+        "tools/aura/easing.py",
+        "tools/aura/scene.py",
+        "tools/aura/dummy.py",
+        "tools/aura/render.py",
+        "tools/aura/export.py",
+        "tools/aura/parts_goku.py",
+        "tools/validate_animation.py",
+        "tools/render_set.py",
+        "tools/pack.py",
+        "tools/cli.py",
+        "tools/make_clip.py",
+        "tools/preview_sheet.py",
+        "tools/proof.py",
+        "tools/smoke.py",
+        "scripts/check_links.py"
+      ],
+      "assets_created": [
+        "DB_CHAR_HERO_GOKU_BASE@0.1.0"
+      ],
+      "outputs": {
+        "gifs": 18,
+        "clips": 23,
+        "parts": 28
+      },
+      "notes": "Todo o conteudo e procedural (Pillow + OpenCV). Nenhuma imagem gerada por IA."
+    }
+  ]
+}

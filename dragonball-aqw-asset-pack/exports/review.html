@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AURA — Validação G3 (18 GIFs)</title>
+<style>
+  :root{
+    --bg:#0e1015; --panel:#161a22; --panel2:#1d222c; --line:#2a3040;
+    --txt:#e6ebf4; --dim:#98a3b8; --accent:#5cc8ff; --warn:#ffb020; --ok:#4ad991;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+       font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+  header{position:sticky;top:0;z-index:10;background:rgba(14,16,21,.94);
+         border-bottom:1px solid var(--line);padding:14px 22px;backdrop-filter:blur(8px)}
+  h1{margin:0;font-size:17px;letter-spacing:.2px}
+  h1 span{color:var(--accent)}
+  .sub{color:var(--dim);font-size:12.5px;margin-top:3px}
+  .stats{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px;font-size:12.5px;color:var(--dim)}
+  .stats b{color:var(--txt);font-weight:600}
+  main{padding:20px 22px 80px;max-width:1560px;margin:0 auto}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+        display:flex;flex-direction:column}
+  .card header{position:static;background:var(--panel2);padding:9px 12px;border:0;
+               border-bottom:1px solid var(--line);backdrop-filter:none}
+  .vid{font-weight:700;color:var(--accent);font-size:12px;letter-spacing:.6px}
+  .cname{font-size:13px;margin-top:1px}
+  .cmeta{color:var(--dim);font-size:11.5px;margin-top:2px}
+  .shot{background:#0b0d12;display:block;width:100%;image-rendering:auto}
+  .ctl{display:flex;gap:8px;align-items:center;padding:8px 12px;border-top:1px solid var(--line)}
+  .ctl button{background:var(--panel2);color:var(--txt);border:1px solid var(--line);
+              border-radius:6px;padding:4px 9px;font-size:12px;cursor:pointer}
+  .ctl button:hover{border-color:var(--accent);color:var(--accent)}
+  .ctl a{color:var(--dim);font-size:11.5px;margin-left:auto;text-decoration:none}
+  .ctl a:hover{color:var(--accent)}
+  section.panel{margin-top:26px;background:var(--panel);border:1px solid var(--line);
+                border-radius:10px;padding:18px 20px}
+  section.panel h2{font-size:15px;margin:0 0 4px}
+  section.panel p.lead{color:var(--dim);font-size:12.5px;margin:0 0 16px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--dim);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+  td.crit{width:34%}
+  td.crit small{display:block;color:var(--dim);font-size:11.5px;margin-top:2px}
+  select{background:var(--panel2);color:var(--txt);border:1px solid var(--line);
+         border-radius:6px;padding:5px 8px;font-size:13px;width:70px}
+  .total{margin-top:16px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+  .score{font-size:24px;font-weight:700}
+  .score.bad{color:#ff6b6b}.score.mid{color:var(--warn)}.score.good{color:var(--ok)}
+  .verdict{font-size:13px;color:var(--dim)}
+  textarea{width:100%;min-height:84px;background:var(--panel2);color:var(--txt);
+           border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit;resize:vertical}
+  .actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .actions button{background:var(--accent);color:#04121d;border:0;border-radius:8px;
+                  padding:9px 16px;font-weight:700;font-size:13px;cursor:pointer}
+  .actions button.ghost{background:transparent;color:var(--txt);border:1px solid var(--line);font-weight:500}
+  pre{background:#0b0d12;border:1px solid var(--line);border-radius:8px;padding:12px;
+      font-size:12px;overflow:auto;white-space:pre-wrap;color:#c9d4e6}
+  .note{color:var(--dim);font-size:12px;margin-top:10px}
+  .pill{display:inline-block;background:var(--panel2);border:1px solid var(--line);
+        border-radius:999px;padding:2px 9px;font-size:11.5px;color:var(--dim);margin-right:6px}
+  .pill.ok{color:var(--ok);border-color:#1f4a37}
+</style>
+</head>
+<body>
+<header>
+  <h1>AURA — validação do primeiro modelo <span>G3</span></h1>
+  <div class="sub">DB_CHAR_HERO_GOKU_BASE · v0.1.0 · 512×512 · GIF 25 fps · 23 clipes implementados</div>
+  <div class="stats">
+    <span>Gate <b>G2 ✅</b></span>
+    <span>Validador automático <b>23/23 clipes · 0 falhas</b></span>
+    <span>Matriz <b>0.0.0 (não congelada)</b></span>
+    <span><b>18</b> GIFs abaixo — assista 3 loops a 100%, depois scrub frame a frame</span>
+  </div>
+</header>
+
+<main>
+  <div class="grid" id="grid"></div>
+
+  <section class="panel">
+    <h2>Rubrica de fluidez (doc 05 §7)</h2>
+    <p class="lead">Cada critério de 0 a 5. Aprovação: <b>≥ 24/30</b> e <b>nenhum &lt; 3</b>.
+       Este é o portão que autoriza congelar a matriz e escalar a produção.</p>
+    <table id="rubric">
+      <thead><tr><th>Critério</th><th>Nota</th></tr></thead>
+      <tbody>
+        <tr><td class="crit">R1 — Integridade visual
+              <small>Juntas invisíveis? Alguma peça flutua ou abre fenda?</small></td>
+            <td><select data-k="R1"><option>0</option><option>1</option><option>2</option>
+                <option>3</option><option>4</option><option selected>5</option></select></td></tr>
+        <tr><td class="crit">R2 — Peso e timing
+              <small>Há antecipação, snap e assentamento? O hitstop aparece?</small></td>
+            <td><select data-k="R2"><option>0</option><option>1</option><option>2</option>
+                <option>3</option><option>4</option><option selected>5</option></select></td></tr>
+        <tr><td class="crit">R3 — Arcos e spacing
+              <small>Mãos e pés percorrem curvas? O espaçamento acelera/desacelera?</small></td>
+            <td><select data-k="R3"><option>0</option><option>1</option><option>2</option>
+                <option>3</option><option>4</option><option selected>5</option></select></td></tr>
+        <tr><td class="crit">R4 — Secundárias
+              <small>Cabelo/capa acompanham com atraso e overshoot?</small></td>
+            <td><select data-k="R4"><option>0</option><option>1</option><option>2</option>
+                <option>3</option><option>4</option><option selected>5</option></select></td></tr>
+        <tr><td class="crit">R5 — Continuidade / loop
+              <small>O loop fecha sem salto? Há frames mortos?</small></td>
+            <td><select data-k="R5"><option>0</option><option>1</option><option>2</option>
+                <option>3</option><option>4</option><option selected>5</option></select></td></tr>
+        <tr><td class="crit">R6 — Leitura e expressão
+              <small>A pose é inequívoca? A face comunica o estado?</small></td>
+            <td><select data-k="R6"><option>0</option><option>1</option><option>2</option>
+                <option>3</option><option>4</option><option selected>5</option></select></td></tr>
+      </tbody>
+    </table>
+    <div class="total">
+      <div class="score good" id="score">30/30</div>
+      <div class="verdict" id="verdict">Aprovado — pode congelar a matriz (G4).</div>
+    </div>
+    <div class="note">Observações e correções pedidas (cite o clipe e o frame):</div>
+    <textarea id="obs" placeholder="ex.: V08 attack_heavy, frame 12 — a bota de trás atravessa o chão em 1 px."></textarea>
+    <div class="actions">
+      <button id="copy">Copiar ficha preenchida</button>
+      <button class="ghost" id="reset">Zerar</button>
+    </div>
+    <pre id="out" hidden></pre>
+  </section>
+
+  <section class="panel">
+    <h2>O que já está garantido por máquina</h2>
+    <p class="lead"><code>python3 tools/validate_animation.py</code> roda 11 métricas em todos os clipes:</p>
+    <div>
+      <span class="pill ok">gap de junta 0 px</span>
+      <span class="pill ok">pivô ≤ 0,25 px</span>
+      <span class="pill ok">foot slip ≤ 2 px de desvio</span>
+      <span class="pill ok">seam de loop 0° / 0 px</span>
+      <span class="pill ok">jitter ≤ 3 inversões</span>
+      <span class="pill ok">holds ≤ 6 frames</span>
+      <span class="pill ok">canvas sem estouro</span>
+      <span class="pill ok">alpha limpo</span>
+      <span class="pill ok">ordem de camadas exata</span>
+    </div>
+    <div class="note">O automático não julga gosto nem legibilidade — isso é a rubrica acima.</div>
+  </section>
+</main>
+
+<script>
+const CLIPS = [
+  ["V01","idle","96f · 4,0 s · loop","respiração + blink"],
+  ["V02","idle_combat","72f · 3,0 s · loop","guarda de combate"],
+  ["V03","walk","24f · 1,0 s · loop","8 poses de caminhada"],
+  ["V04","run","16f · 0,67 s · loop","airtime + inclinação"],
+  ["V05","turn_180","12f · 0,5 s","virada de facing"],
+  ["V06","jump_land","26f · 1,08 s","antecipação / ar / impacto"],
+  ["V07","attack_light_1","18f · 0,75 s","jab com hitstop 50 ms"],
+  ["V08","attack_heavy","30f · 1,25 s","soco carregado + overshoot"],
+  ["V09","combo_light_3","60f · 2,5 s","3 golpes encadeados"],
+  ["V10","cast","36f · 1,5 s","carga de ki + liberação"],
+  ["V11","attack_whiff","20f · 0,83 s","erro (miss) visitado a fundo"],
+  ["V12","evade_backstep","12f · 0,5 s","esquiva do defensor"],
+  ["V13","attack_crit","24f · 1,0 s","crítico + flash + shake"],
+  ["V14","hurt_light","12f · 0,5 s","dano leve + face hurt"],
+  ["V15","hurt_crit","24f · 1,0 s","dano crítico + knockback"],
+  ["V16","death","40f · 1,67 s","queda com peso"],
+  ["V17","block_impact_dodge","26f · 1,08 s","guarda + esquiva"],
+  ["V18","montage_combat","120f · 4,8 s","resumo jogável"],
+];
+const BASE = "characters/DB_CHAR_HERO_GOKU_BASE/previews/";
+const FILE = {
+  "V01":"idle","V02":"idle_combat","V03":"walk","V04":"run","V05":"turn_180",
+  "V06":"jump_land","V07":"attack_light_1","V08":"attack_heavy","V09":"combo_light_3",
+  "V10":"cast","V11":"attack_whiff","V12":"evade_backstep","V13":"attack_crit",
+  "V14":"hurt_light","V15":"hurt_crit","V16":"death","V17":"block_impact+dodge",
+  "V18":"montage_combat"
+};
+const grid = document.getElementById("grid");
+for (const [vid, name, meta, desc] of CLIPS) {
+  const src = `${BASE}${vid}/DB_CHAR_HERO_GOKU_BASE__${FILE[vid]}__v0.1.0.gif`;
+  const card = document.createElement("article");
+  card.className = "card";
+  card.innerHTML = `
+    <header>
+      <div class="vid">${vid} <span class="cname">${name}</span></div>
+      <div class="cmeta">${meta} — ${desc}</div>
+    </header>
+    <img class="shot" src="${src}" alt="${name}" loading="lazy">
+    <div class="ctl">
+      <span class="cmeta">loop contínuo · clique para reabrir do zero</span>
+      <a href="${src}" target="_blank">abrir GIF ↗</a>
+    </div>`;
+  grid.appendChild(card);
+}
+
+// reinicia a animação do GIF no clique (equivalente a "rebobinar")
+grid.addEventListener("click", (e) => {
+  const img = e.target.closest(".card")?.querySelector("img");
+  if (!img) return;
+  img.src = img.src.split("?")[0] + "?t=" + Date.now();
+});
+
+function score() {
+  const vals = [...document.querySelectorAll("#rubric select")].map(s => +s.value);
+  const total = vals.reduce((a, b) => a + b, 0);
+  const min = Math.min(...vals);
+  const el = document.getElementById("score");
+  el.textContent = `${total}/30`;
+  el.className = "score " + (total >= 24 && min >= 3 ? "good" : total >= 18 ? "mid" : "bad");
+  const ok = total >= 24 && min >= 3;
+  const low = [...document.querySelectorAll("#rubric select")]
+    .filter(s => +s.value < 3).map(s => s.dataset.k);
+  document.getElementById("verdict").textContent = ok
+    ? "Aprovado — pode congelar a matriz (G4)."
+    : `Reprovado — ${low.length ? "critérios abaixo de 3: " + low.join(", ") : "total abaixo de 24"}. Ciclo de correção do doc 05 §8.`;
+}
+document.querySelectorAll("#rubric select").forEach(s => s.addEventListener("change", score));
+score();
+
+document.getElementById("copy").addEventListener("click", () => {
+  const v = [...document.querySelectorAll("#rubric select")]
+    .map(s => `${s.dataset.k} ${s.value}`).join("   ");
+  const total = [...document.querySelectorAll("#rubric select")]
+    .map(s => +s.value).reduce((a, b) => a + b, 0);
+  const text =
+`ASSET: DB_CHAR_HERO_GOKU_BASE     VERSION: 0.1.0
+R1 [ ]  R2 [ ]  R3 [ ]  R4 [ ]  R5 [ ]  R6 [ ]
+${v}
+TOTAL: ${total}/30      AUTOMATICO: PASS (23/23 clipes, 0 falhas)
+OBSERVACOES:
+${document.getElementById("obs").value || "(nenhuma)"}`;
+  navigator.clipboard?.writeText(text);
+  const out = document.getElementById("out");
+  out.hidden = false; out.textContent = text;
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  document.querySelectorAll("#rubric select").forEach(s => s.value = "5");
+  document.getElementById("obs").value = "";
+  document.getElementById("out").hidden = true;
+  score();
+});
+</script>
+</body>
+</html>

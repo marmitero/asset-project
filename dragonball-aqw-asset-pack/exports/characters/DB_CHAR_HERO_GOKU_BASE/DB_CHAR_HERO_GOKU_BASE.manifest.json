@@ -1,0 +1,192 @@
+{
+  "asset_id": "DB_CHAR_HERO_GOKU_BASE",
+  "asset_type": "character",
+  "version": "0.1.0",
+  "state": "REVIEW",
+  "created_at": "2026-10-22T17:36:44",
+  "canvas": {
+    "width": 512,
+    "height": 512,
+    "ground_y": 448,
+    "height_px": 220
+  },
+  "rig": "DB_RIG_HUMANOID_MALE_A",
+  "fps": {
+    "authoring": 24,
+    "sample": 60,
+    "gif": 25
+  },
+  "clips": [
+    "attack_crit",
+    "attack_heavy",
+    "attack_light_1",
+    "attack_whiff",
+    "block_impact+dodge",
+    "cast",
+    "combo_light_3",
+    "death",
+    "evade_backstep",
+    "hurt_crit",
+    "hurt_light",
+    "idle",
+    "idle_combat",
+    "jump_land",
+    "montage_combat",
+    "run",
+    "turn_180",
+    "walk"
+  ],
+  "files": [
+    {
+      "id": "V01",
+      "clip": "idle",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V01/DB_CHAR_HERO_GOKU_BASE__idle__v0.1.0.gif",
+      "bytes": 619626,
+      "sha256": "e2ac0ae7737adb41c4d89dcce5bbe2c6ec5da4609978912c9cacea5101a4fbdb"
+    },
+    {
+      "id": "V02",
+      "clip": "idle_combat",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V02/DB_CHAR_HERO_GOKU_BASE__idle_combat__v0.1.0.gif",
+      "bytes": 640748,
+      "sha256": "3cb7fd39ab2fd38d5abcf48dc794e601a3e0fc7ac7de439cc9227cb336cdb151"
+    },
+    {
+      "id": "V03",
+      "clip": "walk",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V03/DB_CHAR_HERO_GOKU_BASE__walk__v0.1.0.gif",
+      "bytes": 257646,
+      "sha256": "f07142ced1c506556f3060de002ce37920547fb394fabcd0d67cb7d32818c1af"
+    },
+    {
+      "id": "V04",
+      "clip": "run",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V04/DB_CHAR_HERO_GOKU_BASE__run__v0.1.0.gif",
+      "bytes": 176887,
+      "sha256": "43e9e585f192fcaaa04330f6de247cfd31ecf8a71153fba3de00c6865e7018a8"
+    },
+    {
+      "id": "V05",
+      "clip": "turn_180",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V05/DB_CHAR_HERO_GOKU_BASE__turn_180__v0.1.0.gif",
+      "bytes": 131949,
+      "sha256": "2bf401a018157c206ed2d074b3abd370cdb7afb959a486dbb10689df56c18da1"
+    },
+    {
+      "id": "V06",
+      "clip": "jump_land",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V06/DB_CHAR_HERO_GOKU_BASE__jump_land__v0.1.0.gif",
+      "bytes": 284131,
+      "sha256": "e41a5a9b5052b94704c45cefa2e82ce0081247ee5c5603e499a77be43ae171ac"
+    },
+    {
+      "id": "V07",
+      "clip": "attack_light_1",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V07/DB_CHAR_HERO_GOKU_BASE__attack_light_1__v0.1.0.gif",
+      "bytes": 214609,
+      "sha256": "5d4f66002a0328439454db68189d4b21478a7a955c79eb4ca5da50c84b034adf"
+    },
+    {
+      "id": "V08",
+      "clip": "attack_heavy",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V08/DB_CHAR_HERO_GOKU_BASE__attack_heavy__v0.1.0.gif",
+      "bytes": 351374,
+      "sha256": "f51a5bbb91bbabbb5d69c071542543bc627c795944f7687c2cff6d6b77273b42"
+    },
+    {
+      "id": "V09",
+      "clip": "combo_light_3",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V09/DB_CHAR_HERO_GOKU_BASE__combo_light_3__v0.1.0.gif",
+      "bytes": 681938,
+      "sha256": "1a6127be95c5632d51227dd6406787f28d89e96a72d7636a78a3341b606360f0"
+    },
+    {
+      "id": "V10",
+      "clip": "cast",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V10/DB_CHAR_HERO_GOKU_BASE__cast__v0.1.0.gif",
+      "bytes": 393326,
+      "sha256": "713d4d85c1893ff915bbdbb206895ae6eb1fd8b0a04d24bd7844f453ba70d290"
+    },
+    {
+      "id": "V11",
+      "clip": "attack_whiff",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V11/DB_CHAR_HERO_GOKU_BASE__attack_whiff__v0.1.0.gif",
+      "bytes": 264030,
+      "sha256": "52ad976469398f9b134844f0811ecbca1b89b852d6c49d9bccd39929caa6aeba"
+    },
+    {
+      "id": "V12",
+      "clip": "evade_backstep",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V12/DB_CHAR_HERO_GOKU_BASE__evade_backstep__v0.1.0.gif",
+      "bytes": 183637,
+      "sha256": "dffd9ca8bad9a15418877828b448fa38a01b0f8b1d08934255b386ca27e6fe22"
+    },
+    {
+      "id": "V13",
+      "clip": "attack_crit",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V13/DB_CHAR_HERO_GOKU_BASE__attack_crit__v0.1.0.gif",
+      "bytes": 330008,
+      "sha256": "ed16b373b605707491404d1c7af5c10e8b47fc9fc1f80df1c0c0b72160dcb060"
+    },
+    {
+      "id": "V14",
+      "clip": "hurt_light",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V14/DB_CHAR_HERO_GOKU_BASE__hurt_light__v0.1.0.gif",
+      "bytes": 129640,
+      "sha256": "a2df43f3a0542df996cbf6b25669c21c556e320f59432b00fff1f500d7884ccd"
+    },
+    {
+      "id": "V15",
+      "clip": "hurt_crit",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V15/DB_CHAR_HERO_GOKU_BASE__hurt_crit__v0.1.0.gif",
+      "bytes": 266913,
+      "sha256": "40eff1eca760d7e915e92be4a9326aacf7585a13fd041fd1a27b4414534a5c6b"
+    },
+    {
+      "id": "V16",
+      "clip": "death",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V16/DB_CHAR_HERO_GOKU_BASE__death__v0.1.0.gif",
+      "bytes": 438735,
+      "sha256": "e7ed40c34ba51c9b4079beae1c4a306a8214d29b19c5bcb63d991b116006dfb1"
+    },
+    {
+      "id": "V17",
+      "clip": "block_impact+dodge",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V17/DB_CHAR_HERO_GOKU_BASE__block_impact+dodge__v0.1.0.gif",
+      "bytes": 312954,
+      "sha256": "7a86c1870a2b2c5a0bff05476ec3b0306d9fefb7a1a2c2b866cb38eaf812e3fd"
+    },
+    {
+      "id": "V18",
+      "clip": "montage_combat",
+      "type": "gif",
+      "path": "characters/DB_CHAR_HERO_GOKU_BASE/previews/V18/DB_CHAR_HERO_GOKU_BASE__montage_combat__v0.1.0.gif",
+      "bytes": 1408704,
+      "sha256": "e817d22ce41718ca540c3c7bf115b70daf85f9d26efdf480cd5c5630329f36a4"
+    }
+  ],
+  "qa": {
+    "validator": "validate_animation.py",
+    "clips_checked": 23,
+    "errors": 0,
+    "pass": true
+  },
+  "license": "fan_art_non_commercial"
+}

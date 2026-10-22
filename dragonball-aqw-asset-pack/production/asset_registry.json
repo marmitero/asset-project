@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "description": "Registro de assets criados, com status e caminho. Reconstruido a partir dos metadados; nao editar a mao apos o congelamento.",
+  "assets": [],
+  "planned": [
+    {"asset_id": "DB_RIG_HUMANOID_MALE_A", "status": "PLANNED", "phase": 2},
+    {"asset_id": "DB_CHAR_HERO_GOKU_BASE", "status": "PLANNED", "phase": 2}
+  ],
+  "notes": "Vazio de assets reais: a Fase 1 produziu apenas documentacao e padroes."
+}

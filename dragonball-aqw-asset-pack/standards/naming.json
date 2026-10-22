@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "id": {
+    "prefix": "DB_",
+    "pattern": "^DB_[A-Z0-9]+(_[A-Z0-9]+){2,5}$",
+    "format": "DB_<CATEGORY>_<SUBCATEGORY>_<NAME>_<VARIANT>_<STATE>",
+    "max_length": 64,
+    "separator": "_",
+    "case": "UPPER"
+  },
+  "categories": {
+    "CHAR": ["HERO", "VILLAIN", "NPC", "BASE", "DUMMY"],
+    "RIG": ["HUMANOID", "SAIYAN", "NAMEKIAN", "MAJIN", "ANDROID", "FRIEZA", "CREATURE", "BOSS"],
+    "EQUIP": ["ARMOR", "WEAPON", "HELM", "HAIR", "CAPE", "GLOVE", "BOOT", "ACC"],
+    "ENEMY": ["COMMON", "ELITE", "BOSS"],
+    "PET": ["COMPANION", "CREATURE", "SUMMON"],
+    "SKILL": ["MELEE", "BEAM", "BLAST", "BUFF", "HEAL", "TRANSFORM"],
+    "VFX": ["SLASH", "IMPACT", "EXPLOSION", "AURA", "TRAIL", "DUST", "SPARK"],
+    "ENV": ["SKY", "HORIZON", "MID", "STRUCTURE", "DECOR", "GROUND", "PROP", "FG", "OCCLUDER"],
+    "MAP": ["EARTH", "NAMEK", "BEERUS", "TOP", "CELL", "MOVIE"],
+    "UI": ["HUD", "INVENTORY", "EQUIPMENT", "SKILLS", "QUESTS", "SHOP", "CHAT", "DIALOG", "CREATION", "SETTINGS", "ICON"],
+    "ITEM": ["CONSUMABLE", "MATERIAL", "QUEST", "CURRENCY", "CAPSULE", "DRAGON_BALL"],
+    "ICON": ["SKILL", "ITEM", "STATUS", "TRANSFORM"]
+  },
+  "states": [
+    "IDLE", "IDLE_COMBAT", "BLINK", "WALK", "RUN", "WALK_BACK", "TURN", "JUMP", "FALL", "LAND",
+    "DODGE", "BLOCK", "BLOCK_IMPACT", "SIT", "ATTACK01", "ATTACK02", "ATTACK03", "ATTACK_HEAVY",
+    "ATTACK_CRIT", "ATTACK_WHIFF", "CAST", "CHANNEL", "CHARGE", "HURT_LIGHT", "HURT_HEAVY",
+    "HURT_CRIT", "KNOCKBACK", "DEATH", "REVIVE", "VICTORY", "TAUNT", "SPAWN", "TRANSFORM_IN",
+    "TRANSFORM_OUT", "ICON", "PORTRAIT"
+  ],
+  "variants": [
+    "BASE", "SSJ", "SSJ2", "SSJ3", "SSG", "SSB", "SSBE", "UI_SIGN", "UI", "ROSE", "BEAST",
+    "GOLDEN", "BLACK", "ORANGE", "MAJIN", "KID", "ADULT", "TEEN", "CC1_BLUE", "CC2_RED",
+    "GREEN", "BLUE", "RED", "ELITE", "BROKEN", "DAY", "NIGHT", "DUSK"
+  ],
+  "files": {
+    "case": "lower",
+    "separator": "__",
+    "pattern": "^[a-z0-9_]+__[a-z0-9_]+(__[a-z0-9]+)?(__f\\d{4})?\\.(png|json|gif|apng)$",
+    "examples": [
+      "db_char_hero_goku_base__idle__v1.0.0.png",
+      "db_char_hero_goku_base__run__f0012.png",
+      "db_equip_weapon_sword_trunks__icon__v1.0.0.png",
+      "db_env_namek_sky_day__layer__v1.0.0.png",
+      "db_char_hero_goku_base__idle__v1.0.0.gif"
+    ]
+  },
+  "folders": {
+    "case": "lower_snake",
+    "forbidden_chars": [" ", "-", "#", "@", "(", ")", "á", "é", "í", "ó", "ú", "ã", "õ", "ç"]
+  },
+  "forbidden_names": ["final", "novo", "new", "teste", "test", "copia", "copy", "temp", "v2_final"]
+}

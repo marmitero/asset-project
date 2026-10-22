@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "description": "Ordem de render do paper-doll. z crescente = mais à frente. Fonte única de verdade para composer, atlas e engines.",
+  "layers": [
+    {"z": 0, "slot": "shadow", "bone": "root", "type": "procedural", "optional": true},
+    {"z": 10, "slot": "pet", "bone": "pet_anchor", "type": "external", "optional": true},
+    {"z": 20, "slot": "aura_back", "bone": "root", "type": "vfx", "optional": true},
+    {"z": 30, "slot": "cape", "bone": "cape_01", "type": "equipment", "optional": true},
+    {"z": 31, "slot": "wings", "bone": "chest", "type": "equipment", "optional": true},
+    {"z": 40, "slot": "hair_back", "bone": "hair_back_01", "type": "body", "optional": false},
+    {"z": 50, "slot": "weapon_back", "bone": "hand_b", "type": "equipment", "optional": true},
+    {"z": 60, "slot": "upper_arm_b", "bone": "upper_arm_b", "type": "body", "optional": false},
+    {"z": 61, "slot": "forearm_b", "bone": "forearm_b", "type": "body", "optional": false},
+    {"z": 62, "slot": "hand_b", "bone": "hand_b", "type": "body", "optional": false},
+    {"z": 70, "slot": "thigh_b", "bone": "thigh_b", "type": "body", "optional": false},
+    {"z": 71, "slot": "shin_b", "bone": "shin_b", "type": "body", "optional": false},
+    {"z": 72, "slot": "foot_b", "bone": "foot_b", "type": "body", "optional": false},
+    {"z": 80, "slot": "pelvis", "bone": "pelvis", "type": "body", "optional": false},
+    {"z": 90, "slot": "torso", "bone": "chest", "type": "body", "optional": false},
+    {"z": 100, "slot": "thigh_f", "bone": "thigh_f", "type": "body", "optional": false},
+    {"z": 101, "slot": "shin_f", "bone": "shin_f", "type": "body", "optional": false},
+    {"z": 102, "slot": "foot_f", "bone": "foot_f", "type": "body", "optional": false},
+    {"z": 110, "slot": "head", "bone": "head", "type": "body", "optional": false},
+    {"z": 111, "slot": "face", "bone": "head", "type": "body", "optional": false},
+    {"z": 115, "slot": "hair_front", "bone": "head", "type": "body", "optional": false},
+    {"z": 116, "slot": "helm", "bone": "head", "type": "equipment", "optional": true},
+    {"z": 120, "slot": "shoulders", "bone": "chest", "type": "equipment", "optional": true},
+    {"z": 130, "slot": "upper_arm_f", "bone": "upper_arm_f", "type": "body", "optional": false},
+    {"z": 131, "slot": "forearm_f", "bone": "forearm_f", "type": "body", "optional": false},
+    {"z": 132, "slot": "hand_f", "bone": "hand_f", "type": "body", "optional": false},
+    {"z": 140, "slot": "weapon_f", "bone": "weapon_f", "type": "equipment", "optional": true},
+    {"z": 150, "slot": "attack_fx", "bone": "weapon_f", "type": "vfx", "optional": true},
+    {"z": 160, "slot": "aura_front", "bone": "root", "type": "vfx", "optional": true}
+  ],
+  "rules": {
+    "back_shade_multiplier": 0.82,
+    "back_stroke_multiplier": 1.2,
+    "overlap_px": [2, 3],
+    "hip_overlap_px": 4,
+    "sort_key": "z_ascending"
+  }
+}

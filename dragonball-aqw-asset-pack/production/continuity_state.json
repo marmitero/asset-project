@@ -1,0 +1,66 @@
+{
+  "project": "dragonball-aqw-asset-pack",
+  "codename": "AURA",
+  "schema_version": "1.0.0",
+  "current_phase": "PHASE_2_FIRST_MODEL",
+  "last_completed_session": "S02",
+  "next_session": "S03_OR_G3_REVIEW",
+  "matrix_version": "0.0.0",
+  "matrix_frozen": false,
+  "visual_bible_version": "1.0.0",
+  "technical_standard_version": "1.0.0",
+  "approved_assets": [],
+  "pending_assets": [
+    "DB_CHAR_HERO_GOKU_BASE (aguardando G3)"
+  ],
+  "blocked_assets": [],
+  "known_issues": [],
+  "next_priorities": [
+    "revisar os 18 GIFs com a rubrica de 30 pontos (G3)",
+    "se aprovado: congelar matriz (G4) e bump matrix_version 1.0.0",
+    "se reprovado: ciclo de correcao por clipe",
+    "depois do G4: completar os 35 clipes, SSJ, equipamentos, VFX, mapas, UI"
+  ],
+  "resume_protocol": [
+    "ler README.md",
+    "ler docs/01_VISUAL_BIBLE.md",
+    "ler docs/02_TECHNICAL_SPECIFICATION.md",
+    "ler este arquivo",
+    "ler production/session_reports/S01_documentation.md",
+    "consultar production/production_backlog.json",
+    "rodar tools/validate antes de produzir"
+  ],
+  "phase": "PHASE_2_FIRST_MODEL_RENDERED",
+  "current_session": "S02",
+  "matrix_status": "unfrozen",
+  "renderer_version": "0.1.0",
+  "first_model": {
+    "asset_id": "DB_CHAR_HERO_GOKU_BASE",
+    "version": "0.1.0",
+    "clips_implemented": 23,
+    "parts": 28,
+    "previews_generated": 18,
+    "qa_clips_pass": 23,
+    "qa_errors": 0
+  },
+  "blockers": [
+    "G3: revisao humana dos 18 GIFs (rubrica 30 pontos)"
+  ],
+  "updated_at": "2026-10-22T16:07:31",
+  "phase_2": {
+    "renderer_version": "0.1.0",
+    "first_model": {
+      "asset_id": "DB_CHAR_HERO_GOKU_BASE",
+      "version": "0.1.0",
+      "clips_implemented": 23,
+      "parts": 28,
+      "previews_generated": 18,
+      "qa_clips_pass": 23,
+      "qa_errors": 0
+    },
+    "blockers": [
+      "G3: revisao humana dos 18 GIFs (rubrica 30 pontos)"
+    ],
+    "updated_at": "2026-10-22T16:07:34"
+  }
+}

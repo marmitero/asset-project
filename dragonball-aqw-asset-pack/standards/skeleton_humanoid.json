@@ -1,0 +1,697 @@
+{
+  "rig_id": "DB_RIG_HUMANOID_MALE_A",
+  "version": "1.2.0",
+  "height_px": 220,
+  "units": "px",
+  "coordinate_system": "world_y_up",
+  "rest_pose": "A-pose",
+  "notes": "dir_deg = direcao absoluta do eixo do osso no mundo (90 = para cima, 0 = +x). v1.2.0: cabeca 46 px, tronco alongado, pernas 80 px, maos e pes grandes - silhueta AQW. Feet com sole em y=0 (ankle 12 + 12).",
+  "bones": [
+    {
+      "name": "root",
+      "parent": null,
+      "pos": [
+        0,
+        0
+      ],
+      "dir_deg": 90,
+      "length_px": 0,
+      "limit_deg": [
+        -180,
+        180
+      ]
+    },
+    {
+      "name": "pelvis",
+      "parent": "root",
+      "pos": [
+        0,
+        92
+      ],
+      "dir_deg": 90,
+      "length_px": 16,
+      "limit_deg": [
+        -14,
+        14
+      ]
+    },
+    {
+      "name": "spine",
+      "parent": "pelvis",
+      "pos": [
+        0,
+        108
+      ],
+      "dir_deg": 90,
+      "length_px": 17,
+      "limit_deg": [
+        -20,
+        26
+      ]
+    },
+    {
+      "name": "chest",
+      "parent": "spine",
+      "pos": [
+        0,
+        126
+      ],
+      "dir_deg": 90,
+      "length_px": 30,
+      "limit_deg": [
+        -14,
+        18
+      ]
+    },
+    {
+      "name": "neck",
+      "parent": "chest",
+      "pos": [
+        0,
+        158
+      ],
+      "dir_deg": 90,
+      "length_px": 8,
+      "limit_deg": [
+        -30,
+        30
+      ]
+    },
+    {
+      "name": "head",
+      "parent": "neck",
+      "pos": [
+        0,
+        166
+      ],
+      "dir_deg": 90,
+      "length_px": 46,
+      "limit_deg": [
+        -30,
+        30
+      ]
+    },
+    {
+      "name": "clavicle_f",
+      "parent": "chest",
+      "pos": [
+        5,
+        154
+      ],
+      "dir_deg": 8,
+      "length_px": 20,
+      "limit_deg": [
+        -22,
+        30
+      ]
+    },
+    {
+      "name": "upper_arm_f",
+      "parent": "clavicle_f",
+      "pos": [
+        25,
+        156
+      ],
+      "dir_deg": -74,
+      "length_px": 33,
+      "limit_deg": [
+        -40,
+        200
+      ]
+    },
+    {
+      "name": "forearm_f",
+      "parent": "upper_arm_f",
+      "pos": [
+        34.1,
+        124.28
+      ],
+      "dir_deg": -70,
+      "length_px": 28,
+      "limit_deg": [
+        0,
+        150
+      ]
+    },
+    {
+      "name": "hand_f",
+      "parent": "forearm_f",
+      "pos": [
+        43.67,
+        97.97
+      ],
+      "dir_deg": -60,
+      "length_px": 18,
+      "limit_deg": [
+        -35,
+        45
+      ]
+    },
+    {
+      "name": "weapon_f",
+      "parent": "hand_f",
+      "pos": [
+        52.67,
+        82.38
+      ],
+      "dir_deg": -60,
+      "length_px": 44,
+      "limit_deg": [
+        -180,
+        180
+      ]
+    },
+    {
+      "name": "clavicle_b",
+      "parent": "chest",
+      "pos": [
+        -5,
+        154
+      ],
+      "dir_deg": 172,
+      "length_px": 20,
+      "limit_deg": [
+        -22,
+        30
+      ]
+    },
+    {
+      "name": "upper_arm_b",
+      "parent": "clavicle_b",
+      "pos": [
+        -19,
+        156
+      ],
+      "dir_deg": -106,
+      "length_px": 33,
+      "limit_deg": [
+        -40,
+        200
+      ]
+    },
+    {
+      "name": "forearm_b",
+      "parent": "upper_arm_b",
+      "pos": [
+        -28.1,
+        124.28
+      ],
+      "dir_deg": -110,
+      "length_px": 28,
+      "limit_deg": [
+        0,
+        150
+      ]
+    },
+    {
+      "name": "hand_b",
+      "parent": "forearm_b",
+      "pos": [
+        -37.67,
+        97.97
+      ],
+      "dir_deg": -120,
+      "length_px": 18,
+      "limit_deg": [
+        -35,
+        45
+      ]
+    },
+    {
+      "name": "thigh_f",
+      "parent": "pelvis",
+      "pos": [
+        12.0,
+        92
+      ],
+      "dir_deg": -88,
+      "length_px": 42,
+      "limit_deg": [
+        -45,
+        115
+      ]
+    },
+    {
+      "name": "shin_f",
+      "parent": "thigh_f",
+      "pos": [
+        13.5,
+        50
+      ],
+      "dir_deg": -89.4,
+      "length_px": 38,
+      "limit_deg": [
+        0,
+        155
+      ]
+    },
+    {
+      "name": "foot_f",
+      "parent": "shin_f",
+      "pos": [
+        15.0,
+        12
+      ],
+      "dir_deg": -30,
+      "length_px": 20,
+      "limit_deg": [
+        -40,
+        45
+      ]
+    },
+    {
+      "name": "toe_f",
+      "parent": "foot_f",
+      "pos": [
+        35.0,
+        4
+      ],
+      "dir_deg": 0,
+      "length_px": 12,
+      "limit_deg": [
+        -10,
+        35
+      ]
+    },
+    {
+      "name": "thigh_b",
+      "parent": "pelvis",
+      "pos": [
+        -12.0,
+        92
+      ],
+      "dir_deg": -92,
+      "length_px": 42,
+      "limit_deg": [
+        -45,
+        115
+      ]
+    },
+    {
+      "name": "shin_b",
+      "parent": "thigh_b",
+      "pos": [
+        -13.5,
+        50
+      ],
+      "dir_deg": -90.6,
+      "length_px": 38,
+      "limit_deg": [
+        0,
+        155
+      ]
+    },
+    {
+      "name": "foot_b",
+      "parent": "shin_b",
+      "pos": [
+        -15.0,
+        12
+      ],
+      "dir_deg": 150,
+      "length_px": 20,
+      "limit_deg": [
+        -40,
+        45
+      ]
+    },
+    {
+      "name": "toe_b",
+      "parent": "foot_b",
+      "pos": [
+        -35.0,
+        4
+      ],
+      "dir_deg": 180,
+      "length_px": 12,
+      "limit_deg": [
+        -10,
+        35
+      ]
+    },
+    {
+      "name": "cape_01",
+      "parent": "chest",
+      "pos": [
+        0,
+        156
+      ],
+      "dir_deg": -92,
+      "length_px": 40,
+      "limit_deg": [
+        -70,
+        90
+      ]
+    },
+    {
+      "name": "cape_02",
+      "parent": "cape_01",
+      "pos": [
+        0,
+        116
+      ],
+      "dir_deg": -92,
+      "length_px": 40,
+      "limit_deg": [
+        -80,
+        100
+      ]
+    },
+    {
+      "name": "cape_03",
+      "parent": "cape_02",
+      "pos": [
+        0,
+        76
+      ],
+      "dir_deg": -92,
+      "length_px": 40,
+      "limit_deg": [
+        -80,
+        100
+      ]
+    },
+    {
+      "name": "hair_back_01",
+      "parent": "head",
+      "pos": [
+        0,
+        198
+      ],
+      "dir_deg": -92,
+      "length_px": 20,
+      "limit_deg": [
+        -60,
+        60
+      ]
+    },
+    {
+      "name": "hair_back_02",
+      "parent": "hair_back_01",
+      "pos": [
+        0,
+        178
+      ],
+      "dir_deg": -92,
+      "length_px": 20,
+      "limit_deg": [
+        -70,
+        70
+      ]
+    },
+    {
+      "name": "pet_anchor",
+      "parent": "root",
+      "pos": [
+        -40,
+        0
+      ],
+      "dir_deg": 0,
+      "length_px": 0,
+      "limit_deg": [
+        -180,
+        180
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "slot": "shadow",
+      "bone": "root",
+      "layer": 0,
+      "attachment": null
+    },
+    {
+      "slot": "pet",
+      "bone": "pet_anchor",
+      "layer": 10,
+      "attachment": null
+    },
+    {
+      "slot": "aura_back",
+      "bone": "root",
+      "layer": 20,
+      "attachment": null
+    },
+    {
+      "slot": "cape",
+      "bone": "cape_01",
+      "layer": 30,
+      "attachment": null
+    },
+    {
+      "slot": "wings",
+      "bone": "chest",
+      "layer": 31,
+      "attachment": null
+    },
+    {
+      "slot": "hair_back",
+      "bone": "hair_back_01",
+      "layer": 40,
+      "attachment": null
+    },
+    {
+      "slot": "weapon_back",
+      "bone": "hand_b",
+      "layer": 50,
+      "attachment": null
+    },
+    {
+      "slot": "upper_arm_b",
+      "bone": "upper_arm_b",
+      "layer": 60,
+      "attachment": null
+    },
+    {
+      "slot": "forearm_b",
+      "bone": "forearm_b",
+      "layer": 61,
+      "attachment": null
+    },
+    {
+      "slot": "hand_b",
+      "bone": "hand_b",
+      "layer": 62,
+      "attachment": null
+    },
+    {
+      "slot": "thigh_b",
+      "bone": "thigh_b",
+      "layer": 70,
+      "attachment": null
+    },
+    {
+      "slot": "shin_b",
+      "bone": "shin_b",
+      "layer": 71,
+      "attachment": null
+    },
+    {
+      "slot": "foot_b",
+      "bone": "foot_b",
+      "layer": 72,
+      "attachment": null
+    },
+    {
+      "slot": "pelvis",
+      "bone": "pelvis",
+      "layer": 80,
+      "attachment": null
+    },
+    {
+      "slot": "torso",
+      "bone": "spine",
+      "layer": 90,
+      "attachment": null
+    },
+    {
+      "slot": "thigh_f",
+      "bone": "thigh_f",
+      "layer": 100,
+      "attachment": null
+    },
+    {
+      "slot": "shin_f",
+      "bone": "shin_f",
+      "layer": 101,
+      "attachment": null
+    },
+    {
+      "slot": "foot_f",
+      "bone": "foot_f",
+      "layer": 102,
+      "attachment": null
+    },
+    {
+      "slot": "head",
+      "bone": "head",
+      "layer": 110,
+      "attachment": null
+    },
+    {
+      "slot": "face",
+      "bone": "head",
+      "layer": 111,
+      "attachment": null
+    },
+    {
+      "slot": "hair_front",
+      "bone": "head",
+      "layer": 115,
+      "attachment": null
+    },
+    {
+      "slot": "helm",
+      "bone": "head",
+      "layer": 116,
+      "attachment": null
+    },
+    {
+      "slot": "shoulders",
+      "bone": "chest",
+      "layer": 120,
+      "attachment": null
+    },
+    {
+      "slot": "upper_arm_f",
+      "bone": "upper_arm_f",
+      "layer": 130,
+      "attachment": null
+    },
+    {
+      "slot": "forearm_f",
+      "bone": "forearm_f",
+      "layer": 131,
+      "attachment": null
+    },
+    {
+      "slot": "hand_f",
+      "bone": "hand_f",
+      "layer": 132,
+      "attachment": null
+    },
+    {
+      "slot": "weapon_f",
+      "bone": "weapon_f",
+      "layer": 140,
+      "attachment": null
+    },
+    {
+      "slot": "attack_fx",
+      "bone": "weapon_f",
+      "layer": 150,
+      "attachment": null
+    },
+    {
+      "slot": "aura_front",
+      "bone": "root",
+      "layer": 160,
+      "attachment": null
+    }
+  ],
+  "sockets": [
+    {
+      "name": "hand_f",
+      "bone": "hand_f",
+      "offset": [
+        10,
+        0
+      ],
+      "usage": "weapon_projetil"
+    },
+    {
+      "name": "hand_b",
+      "bone": "hand_b",
+      "offset": [
+        10,
+        0
+      ],
+      "usage": "arma_secundaria"
+    },
+    {
+      "name": "weapon_tip",
+      "bone": "weapon_f",
+      "offset": [
+        44,
+        0
+      ],
+      "usage": "trail_vfx"
+    },
+    {
+      "name": "chest",
+      "bone": "chest",
+      "offset": [
+        0,
+        12
+      ],
+      "usage": "aura_beam"
+    },
+    {
+      "name": "mouth",
+      "bone": "head",
+      "offset": [
+        12,
+        8
+      ],
+      "usage": "ki_blast"
+    },
+    {
+      "name": "forehead",
+      "bone": "head",
+      "offset": [
+        10,
+        28
+      ],
+      "usage": "beam_especial"
+    },
+    {
+      "name": "back",
+      "bone": "chest",
+      "offset": [
+        -14,
+        10
+      ],
+      "usage": "capa_asas"
+    },
+    {
+      "name": "feet",
+      "bone": "foot_f",
+      "offset": [
+        8,
+        0
+      ],
+      "usage": "poeira_impacto"
+    }
+  ],
+  "secondary_chains": {
+    "hair_back": {
+      "bones": [
+        "hair_back_01",
+        "hair_back_02"
+      ],
+      "stiffness": 0.55,
+      "damping": 0.22,
+      "delay_frames": 2,
+      "max_deg": 18
+    },
+    "cape": {
+      "bones": [
+        "cape_01",
+        "cape_02",
+        "cape_03"
+      ],
+      "stiffness": 0.4,
+      "damping": 0.18,
+      "delay_frames": 3,
+      "max_deg": 32
+    },
+    "tail": {
+      "bones": [],
+      "stiffness": 0.5,
+      "damping": 0.2,
+      "delay_frames": 2,
+      "max_deg": 26
+    }
+  }
+}

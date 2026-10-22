@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aura.local/schemas/rig.schema.json",
+  "title": "AURA Rig",
+  "type": "object",
+  "required": ["rig_id", "version", "height_px", "coordinate_system", "bones", "slots", "sockets"],
+  "additionalProperties": false,
+  "properties": {
+    "rig_id": {"type": "string", "pattern": "^DB_RIG_[A-Z0-9_]+$"},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "height_px": {"type": "integer", "minimum": 40, "maximum": 1024},
+    "units": {"const": "px"},
+    "coordinate_system": {"enum": ["world_y_up"]},
+    "rest_pose": {"enum": ["A-pose", "T-pose", "custom"]},
+    "notes": {"type": "string"},
+    "bones": {
+      "type": "array", "minItems": 1, "maxItems": 96,
+      "items": {
+        "type": "object",
+        "required": ["name", "parent", "pos", "dir_deg", "length_px"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+          "parent": {"type": ["string", "null"]},
+          "pos": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+          "dir_deg": {"type": "number", "minimum": -360, "maximum": 360},
+          "length_px": {"type": "number", "minimum": 0},
+          "limit_deg": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2}
+        }
+      }
+    },
+    "slots": {
+      "type": "array", "minItems": 1, "maxItems": 64,
+      "items": {
+        "type": "object",
+        "required": ["slot", "bone", "layer"],
+        "additionalProperties": false,
+        "properties": {
+          "slot": {"type": "string"},
+          "bone": {"type": "string"},
+          "layer": {"type": "integer", "minimum": 0, "maximum": 999},
+          "attachment": {"type": ["string", "null"]},
+          "offset": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+          "rotation_deg": {"type": "number"}
+        }
+      }
+    },
+    "sockets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "bone", "offset"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {"type": "string"},
+          "bone": {"type": "string"},
+          "offset": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+          "usage": {"type": "string"}
+        }
+      }
+    },
+    "secondary_chains": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["bones", "stiffness", "damping"],
+        "properties": {
+          "bones": {"type": "array", "items": {"type": "string"}},
+          "stiffness": {"type": "number", "minimum": 0, "maximum": 1},
+          "damping": {"type": "number", "minimum": 0, "maximum": 1},
+          "delay_frames": {"type": "number", "minimum": 0},
+          "max_deg": {"type": "number", "minimum": 0}
+        }
+      }
+    }
+  }
+}

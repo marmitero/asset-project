@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Render / cache temporário
+production/tmp/
+# QA local (não faz parte do pack)
+production/previews/
+
+# Os GIFs de validação SÃO o entregável do G3: versionados de propósito.
+# (6,8 MB no total; regerar com `python3 tools/cli.py previews`)
+*.tmp
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+

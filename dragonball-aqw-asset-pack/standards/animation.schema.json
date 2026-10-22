@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://aura.local/schemas/animation.schema.json",
+  "title": "AURA Animation Clip",
+  "type": "object",
+  "required": ["clip", "fps_base", "duration_frames", "loop", "tracks", "events"],
+  "additionalProperties": false,
+  "definitions": {
+    "keyframe": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+        "anyOf": [
+          {"type": "number"},
+          {"type": "string"},
+          {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+          {"type": "boolean"}
+        ]
+      }
+    },
+    "track": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/keyframe"}
+    },
+    "event": {
+      "type": "object",
+      "required": ["frame", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "frame": {"type": "integer", "minimum": 0},
+        "type": {
+          "enum": [
+            "hit_frame", "vfx_emit", "sfx", "footstep", "projectile_spawn",
+            "hit_stop", "shake", "flash", "invuln_on", "invuln_off",
+            "cancel", "combo_window", "aura_on", "aura_off", "transform",
+            "turn", "death", "fade", "spawn", "revive", "blink",
+            "off_balance", "crit_fx", "land", "jump", "tick"
+          ]
+        },
+        "payload": {"type": "object"}
+      }
+    }
+  },
+  "properties": {
+    "clip": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "fps_base": {"const": 24},
+    "fps_sample": {"const": 60},
+    "duration_frames": {"type": "integer", "minimum": 1, "maximum": 240},
+    "loop": {"type": "boolean"},
+    "root_motion": {"type": "boolean"},
+    "speed_px_s": {"type": "number", "minimum": 0},
+    "stride_px": {"type": "number", "minimum": 0},
+    "cancel_frame": {"type": "integer", "minimum": 0},
+    "combo_window": {
+      "type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2
+    },
+    "blend_in_frames": {"type": "integer", "minimum": 0, "maximum": 24},
+    "phases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "start", "end"],
+        "properties": {
+          "name": {"type": "string"},
+          "start": {"type": "integer", "minimum": 0},
+          "end": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "tracks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "rotation": {"$ref": "#/definitions/track"},
+          "position": {"$ref": "#/definitions/track"},
+          "scale": {"$ref": "#/definitions/track"},
+          "alpha": {"$ref": "#/definitions/track"},
+          "attachment": {"$ref": "#/definitions/track"},
+          "visible": {"$ref": "#/definitions/track"}
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/event"}
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "pack": "AURA — Dragon Ball x AQW asset pack",
+  "version": "0.1.0",
+  "matrix_version": "0.0.0 (nao congelada)",
+  "generated_at": "2026-10-22T17:36:44",
+  "canvas": {
+    "character": [
+      512,
+      512
+    ],
+    "ground_y": 448,
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "fps": {
+    "authoring": 24,
+    "sample": 60,
+    "gif": 25
+  },
+  "characters": [
+    {
+      "id": "DB_CHAR_HERO_GOKU_BASE",
+      "version": "0.1.0",
+      "manifest": "characters/DB_CHAR_HERO_GOKU_BASE/DB_CHAR_HERO_GOKU_BASE.manifest.json",
+      "clips": 18,
+      "files": 18
+    }
+  ],
+  "totals": {
+    "files": 18,
+    "bytes": 7086855
+  }
+}

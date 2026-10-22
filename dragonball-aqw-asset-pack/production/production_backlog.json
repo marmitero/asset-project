@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "tiers": {
+    "T0": "bloqueia gate ou outro asset",
+    "T1": "primeiro conteudo jogavel",
+    "T2": "variedade",
+    "T3": "polimento e extras"
+  },
+  "items": [
+    {
+      "id": "BL-0001", "asset_id": "DB_RIG_HUMANOID_MALE_A", "title": "Rig humanoide masculino A", "phase": 2, "priority": "T0",
+      "depends_on": [], "status": "PLANNED",
+      "acceptance": ["29 bones", "rest pose A", "limites articulares", "sockets", "validate sem erro"]
+    },
+    {
+      "id": "BL-0002", "asset_id": "DB_CHAR_HERO_GOKU_BASE", "title": "Goku base - corpo e figurino", "phase": 2, "priority": "T0",
+      "depends_on": ["BL-0001"], "status": "PLANNED",
+      "acceptance": ["18-26 pecas", "8 mascaras", "10 faces", "3 penteados", "montagem sem fenda"]
+    },
+    {
+      "id": "BL-0003", "asset_id": "DB_CHAR_HERO_GOKU_BASE", "title": "9 clipes minimos de Goku", "phase": 2, "priority": "T0",
+      "depends_on": ["BL-0002"], "status": "PLANNED",
+      "acceptance": ["idle", "idle_combat", "walk", "run", "attack_light_1", "attack_whiff", "hurt_light", "hurt_crit", "death"]
+    },
+    {
+      "id": "BL-0004", "asset_id": "DB_CHAR_HERO_GOKU_BASE", "title": "18 GIFs de validacao", "phase": 3, "priority": "T0",
+      "depends_on": ["BL-0003"], "status": "PLANNED",
+      "acceptance": ["V01-V18", "metricas PASS", "rubrica >= 24/30"]
+    },
+    {
+      "id": "BL-0005", "asset_id": "MATRIX_V1", "title": "Congelar Matriz v1.0.0", "phase": 4, "priority": "T0",
+      "depends_on": ["BL-0004"], "status": "PLANNED",
+      "acceptance": ["hashes publicados", "certificado", "manifest atualizado"]
+    },
+    {
+      "id": "BL-0006", "asset_id": "DB_CHAR_HERO_VEGETA_BASE", "title": "Vegeta base", "phase": 5, "priority": "T1",
+      "depends_on": ["BL-0005"], "status": "PLANNED",
+      "acceptance": ["pecas", "armadura", "9 clipes", "GIFs"]
+    },
+    {
+      "id": "BL-0007", "asset_id": "DB_CHAR_HERO_GOHAN_BASE", "title": "Gohan adulto", "phase": 5, "priority": "T1",
+      "depends_on": ["BL-0005"], "status": "PLANNED",
+      "acceptance": ["pecas", "gi roxo", "9 clipes", "GIFs"]
+    },
+    {
+      "id": "BL-0008", "asset_id": "DB_CHAR_HERO_PICCOLO_BASE", "title": "Piccolo", "phase": 5, "priority": "T1",
+      "depends_on": ["BL-0005"], "status": "PLANNED",
+      "acceptance": ["rig namekian", "capa", "turbante", "9 clipes"]
+    },
+    {
+      "id": "BL-0009", "asset_id": "DB_CHAR_HERO_TRUNKS_BASE", "title": "Trunks do futuro", "phase": 5, "priority": "T1",
+      "depends_on": ["BL-0005"], "status": "PLANNED",
+      "acceptance": ["jaqueta", "espada", "9 clipes"]
+    },
+    {
+      "id": "BL-0010", "asset_id": "DB_CHAR_HERO_KURIRIN_BASE", "title": "Kuririn", "phase": 5, "priority": "T1",
+      "depends_on": ["BL-0005"], "status": "PLANNED",
+      "acceptance": ["pecas", "9 clipes"]
+    },
+    {
+      "id": "BL-0011", "asset_id": "DB_CHAR_NPC_BULMA_BASE", "title": "Bulma", "phase": 5, "priority": "T1",
+      "depends_on": ["BL-0005"], "status": "PLANNED",
+      "acceptance": ["rig female", "3 faces", "idle/talk"]
+    },
+    {
+      "id": "BL-0012", "asset_id": "DB_EQUIP_ARMOR_SET_GOKU_GI", "title": "Set gi de Goku modular", "phase": 7, "priority": "T1",
+      "depends_on": ["BL-0005"], "status": "PLANNED",
+      "acceptance": ["16 pecas", "mascaras", "compativel com 3 rigs"]
+    }
+  ]
+}

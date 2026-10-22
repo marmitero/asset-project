@@ -1,0 +1,308 @@
+{
+  "version": "1.0.0",
+  "fps_base": 24,
+  "fps_sample": 60,
+  "conventions": {
+    "time_unit": "frames_base",
+    "duration_ms": "frames_base / 24 * 1000",
+    "closing_frame": "frame N equals frame 0 for loops; not rendered",
+    "hit_frame_offset": "hit event fires 1 frame before the impact VFX",
+    "angle_positive": "clockwise_on_screen",
+    "linear_forbidden_on_limbs": true
+  },
+  "clips": [
+    {
+      "id": "idle", "category": "locomotion", "frames": 96, "loop": true, "root_motion": false,
+      "phases": [{"name": "breathe_1", "start": 0, "end": 48}, {"name": "breathe_2", "start": 48, "end": 96}],
+      "events": [{"frame": 58, "type": "blink", "payload": {"duration": 4}}],
+      "blend_in_frames": 4, "first_model": true, "notes": "2 respiracoes, shift de peso, blink unico"
+    },
+    {
+      "id": "idle_combat", "category": "locomotion", "frames": 72, "loop": true, "root_motion": false,
+      "phases": [{"name": "guard", "start": 0, "end": 36}, {"name": "guard_2", "start": 36, "end": 72}],
+      "events": [{"frame": 40, "type": "blink", "payload": {"duration": 4}}],
+      "blend_in_frames": 4, "first_model": true
+    },
+    {
+      "id": "blink", "category": "overlay", "frames": 4, "loop": false, "root_motion": false,
+      "phases": [{"name": "close", "start": 0, "end": 2}, {"name": "open", "start": 2, "end": 4}],
+      "events": [], "blend_in_frames": 0, "first_model": false
+    },
+    {
+      "id": "walk", "category": "locomotion", "frames": 24, "loop": true, "root_motion": false,
+      "speed_px_s": 140, "stride_px": 70,
+      "phases": [
+        {"name": "contact_l", "start": 0, "end": 3}, {"name": "down_l", "start": 3, "end": 6},
+        {"name": "pass_l", "start": 6, "end": 9}, {"name": "up_l", "start": 9, "end": 12},
+        {"name": "contact_r", "start": 12, "end": 15}, {"name": "down_r", "start": 15, "end": 18},
+        {"name": "pass_r", "start": 18, "end": 21}, {"name": "up_r", "start": 21, "end": 24}
+      ],
+      "events": [{"frame": 0, "type": "footstep", "payload": {"foot": "f"}}, {"frame": 12, "type": "footstep", "payload": {"foot": "b"}}],
+      "blend_in_frames": 4, "first_model": true
+    },
+    {
+      "id": "run", "category": "locomotion", "frames": 16, "loop": true, "root_motion": false,
+      "speed_px_s": 340, "stride_px": 113,
+      "phases": [
+        {"name": "contact_l", "start": 0, "end": 2}, {"name": "down_l", "start": 2, "end": 4},
+        {"name": "push_l", "start": 4, "end": 6}, {"name": "air_l", "start": 6, "end": 8},
+        {"name": "contact_r", "start": 8, "end": 10}, {"name": "down_r", "start": 10, "end": 12},
+        {"name": "push_r", "start": 12, "end": 14}, {"name": "air_r", "start": 14, "end": 16}
+      ],
+      "events": [{"frame": 0, "type": "footstep", "payload": {"foot": "f"}}, {"frame": 8, "type": "footstep", "payload": {"foot": "b"}}],
+      "blend_in_frames": 3, "first_model": true
+    },
+    {
+      "id": "walk_back", "category": "locomotion", "frames": 24, "loop": true, "root_motion": false,
+      "speed_px_s": 90,
+      "phases": [{"name": "step_1", "start": 0, "end": 12}, {"name": "step_2", "start": 12, "end": 24}],
+      "events": [{"frame": 0, "type": "footstep"}, {"frame": 12, "type": "footstep"}],
+      "blend_in_frames": 4, "first_model": false
+    },
+    {
+      "id": "turn_180", "category": "transition", "frames": 12, "loop": false, "root_motion": false,
+      "phases": [{"name": "pivot", "start": 0, "end": 12}],
+      "events": [{"frame": 6, "type": "turn"}], "blend_in_frames": 0, "first_model": true
+    },
+    {
+      "id": "jump_start", "category": "air", "frames": 8, "loop": false, "root_motion": false,
+      "phases": [{"name": "crouch", "start": 0, "end": 4}, {"name": "stretch", "start": 4, "end": 8}],
+      "events": [{"frame": 6, "type": "jump"}], "blend_in_frames": 2, "first_model": true
+    },
+    {
+      "id": "fall", "category": "air", "frames": 8, "loop": true, "root_motion": false,
+      "phases": [{"name": "fall_loop", "start": 0, "end": 8}], "events": [], "blend_in_frames": 2, "first_model": true
+    },
+    {
+      "id": "land", "category": "air", "frames": 10, "loop": false, "root_motion": false,
+      "phases": [{"name": "impact", "start": 0, "end": 2}, {"name": "recover", "start": 2, "end": 10}],
+      "events": [{"frame": 1, "type": "land"}, {"frame": 1, "type": "vfx_emit", "payload": {"id": "DB_VFX_DUST_LAND_01", "socket": "feet"}}],
+      "blend_in_frames": 0, "first_model": true
+    },
+    {
+      "id": "dodge", "category": "defense", "frames": 16, "loop": false, "root_motion": true,
+      "phases": [{"name": "anticipate", "start": 0, "end": 2}, {"name": "shift", "start": 2, "end": 10}, {"name": "recover", "start": 10, "end": 16}],
+      "events": [{"frame": 2, "type": "invuln_on"}, {"frame": 12, "type": "invuln_off"}],
+      "blend_in_frames": 2, "first_model": true
+    },
+    {
+      "id": "block_enter", "category": "defense", "frames": 6, "loop": false, "root_motion": false,
+      "phases": [{"name": "raise", "start": 0, "end": 6}], "events": [], "blend_in_frames": 2, "first_model": false
+    },
+    {
+      "id": "block_loop", "category": "defense", "frames": 24, "loop": true, "root_motion": false,
+      "phases": [{"name": "guard", "start": 0, "end": 24}], "events": [], "blend_in_frames": 2, "first_model": false
+    },
+    {
+      "id": "block_impact", "category": "defense", "frames": 10, "loop": false, "root_motion": false,
+      "phases": [{"name": "impact", "start": 0, "end": 2}, {"name": "recover", "start": 2, "end": 10}],
+      "events": [{"frame": 1, "type": "vfx_emit", "payload": {"id": "DB_VFX_BLOCK_SPARK_01", "socket": "chest"}}],
+      "blend_in_frames": 0, "first_model": true
+    },
+    {
+      "id": "sit", "category": "emote", "frames": 40, "loop": true, "root_motion": false,
+      "phases": [{"name": "sit_down", "start": 0, "end": 12}, {"name": "loop", "start": 12, "end": 40}],
+      "events": [], "blend_in_frames": 4, "first_model": false
+    },
+    {
+      "id": "attack_light_1", "category": "attack", "frames": 18, "loop": false, "root_motion": false,
+      "phases": [{"name": "anticipate", "start": 0, "end": 4}, {"name": "strike", "start": 4, "end": 6}, {"name": "impact", "start": 6, "end": 7}, {"name": "hold", "start": 7, "end": 9}, {"name": "recover", "start": 9, "end": 18}],
+      "events": [
+        {"frame": 3, "type": "sfx", "payload": {"id": "whoosh"}},
+        {"frame": 5, "type": "vfx_emit", "payload": {"id": "DB_VFX_SLASH_LIGHT_01", "socket": "weapon_tip"}},
+        {"frame": 6, "type": "hit_frame", "payload": {"damage_type": "physical", "multiplier": 1.0}},
+        {"frame": 6, "type": "hit_stop", "payload": {"frames": 3}},
+        {"frame": 12, "type": "cancel"}
+      ],
+      "cancel_frame": 12, "combo_window": [8, 16], "blend_in_frames": 2, "first_model": true
+    },
+    {
+      "id": "attack_light_2", "category": "attack", "frames": 20, "loop": false, "root_motion": false,
+      "phases": [{"name": "anticipate", "start": 0, "end": 5}, {"name": "strike", "start": 5, "end": 7}, {"name": "impact", "start": 7, "end": 8}, {"name": "hold", "start": 8, "end": 10}, {"name": "recover", "start": 10, "end": 20}],
+      "events": [
+        {"frame": 4, "type": "sfx", "payload": {"id": "whoosh"}},
+        {"frame": 6, "type": "vfx_emit", "payload": {"id": "DB_VFX_SLASH_LIGHT_02", "socket": "weapon_tip"}},
+        {"frame": 7, "type": "hit_frame", "payload": {"damage_type": "physical", "multiplier": 1.1}},
+        {"frame": 7, "type": "hit_stop", "payload": {"frames": 3}},
+        {"frame": 14, "type": "cancel"}
+      ],
+      "cancel_frame": 14, "combo_window": [9, 18], "blend_in_frames": 2, "first_model": false
+    },
+    {
+      "id": "attack_light_3", "category": "attack", "frames": 22, "loop": false, "root_motion": false,
+      "phases": [{"name": "anticipate", "start": 0, "end": 6}, {"name": "strike", "start": 6, "end": 8}, {"name": "impact", "start": 8, "end": 9}, {"name": "hold", "start": 9, "end": 12}, {"name": "recover", "start": 12, "end": 22}],
+      "events": [
+        {"frame": 5, "type": "sfx", "payload": {"id": "whoosh"}},
+        {"frame": 7, "type": "vfx_emit", "payload": {"id": "DB_VFX_SLASH_LIGHT_03", "socket": "weapon_tip"}},
+        {"frame": 8, "type": "hit_frame", "payload": {"damage_type": "physical", "multiplier": 1.2}},
+        {"frame": 8, "type": "hit_stop", "payload": {"frames": 4}},
+        {"frame": 16, "type": "cancel"}
+      ],
+      "cancel_frame": 16, "combo_window": [10, 20], "blend_in_frames": 2, "first_model": false
+    },
+    {
+      "id": "attack_heavy", "category": "attack", "frames": 30, "loop": false, "root_motion": false,
+      "phases": [{"name": "anticipate", "start": 0, "end": 9}, {"name": "strike", "start": 9, "end": 12}, {"name": "impact", "start": 12, "end": 13}, {"name": "hold", "start": 13, "end": 17}, {"name": "recover", "start": 17, "end": 30}],
+      "events": [
+        {"frame": 8, "type": "sfx", "payload": {"id": "whoosh_heavy"}},
+        {"frame": 11, "type": "vfx_emit", "payload": {"id": "DB_VFX_SLASH_HEAVY_01", "socket": "weapon_tip"}},
+        {"frame": 12, "type": "hit_frame", "payload": {"damage_type": "physical", "multiplier": 2.2}},
+        {"frame": 12, "type": "hit_stop", "payload": {"frames": 5}},
+        {"frame": 12, "type": "shake", "payload": {"amplitude": 6, "duration_ms": 180}},
+        {"frame": 24, "type": "cancel"}
+      ],
+      "cancel_frame": 24, "combo_window": [15, 26], "blend_in_frames": 3, "first_model": true
+    },
+    {
+      "id": "attack_crit", "category": "attack", "frames": 24, "loop": false, "root_motion": false,
+      "phases": [{"name": "anticipate", "start": 0, "end": 6}, {"name": "strike", "start": 6, "end": 8}, {"name": "impact", "start": 8, "end": 9}, {"name": "hold", "start": 9, "end": 13}, {"name": "recover", "start": 13, "end": 24}],
+      "events": [
+        {"frame": 5, "type": "sfx", "payload": {"id": "whoosh_crit"}},
+        {"frame": 7, "type": "vfx_emit", "payload": {"id": "DB_VFX_CRIT_BURST_01", "socket": "weapon_tip"}},
+        {"frame": 8, "type": "hit_frame", "payload": {"damage_type": "physical", "multiplier": 1.75, "crit": true}},
+        {"frame": 8, "type": "hit_stop", "payload": {"frames": 8}},
+        {"frame": 8, "type": "flash", "payload": {"color": "#FFFFFF", "alpha": 0.85, "frames": 2}},
+        {"frame": 8, "type": "shake", "payload": {"amplitude": 10, "duration_ms": 260}}
+      ],
+      "cancel_frame": 19, "combo_window": [11, 22], "blend_in_frames": 3, "first_model": true
+    },
+    {
+      "id": "attack_whiff", "category": "attack", "frames": 20, "loop": false, "root_motion": false,
+      "phases": [{"name": "anticipate", "start": 0, "end": 4}, {"name": "strike", "start": 4, "end": 7}, {"name": "off_balance", "start": 7, "end": 12}, {"name": "recover", "start": 12, "end": 20}],
+      "events": [
+        {"frame": 3, "type": "sfx", "payload": {"id": "whoosh"}},
+        {"frame": 6, "type": "vfx_emit", "payload": {"id": "DB_VFX_WHIFF_ARC_01", "socket": "weapon_tip"}},
+        {"frame": 8, "type": "off_balance"}
+      ],
+      "cancel_frame": 15, "blend_in_frames": 2, "first_model": true
+    },
+    {
+      "id": "cast", "category": "skill", "frames": 36, "loop": false, "root_motion": false,
+      "phases": [{"name": "prepare", "start": 0, "end": 7}, {"name": "channel", "start": 7, "end": 19}, {"name": "release", "start": 19, "end": 23}, {"name": "recover", "start": 23, "end": 36}],
+      "events": [
+        {"frame": 7, "type": "aura_on", "payload": {"id": "DB_VFX_KI_CHARGE_01"}},
+        {"frame": 19, "type": "projectile_spawn", "payload": {"id": "DB_SKILL_BEAM_KAMEHAMEHA_BLUE", "socket": "hand_f"}},
+        {"frame": 20, "type": "shake", "payload": {"amplitude": 4, "duration_ms": 140}},
+        {"frame": 28, "type": "cancel"}
+      ],
+      "cancel_frame": 28, "blend_in_frames": 4, "first_model": true
+    },
+    {
+      "id": "channel", "category": "skill", "frames": 24, "loop": true, "root_motion": false,
+      "phases": [{"name": "channel_loop", "start": 0, "end": 24}],
+      "events": [{"frame": 0, "type": "tick"}, {"frame": 8, "type": "tick"}, {"frame": 16, "type": "tick"}],
+      "blend_in_frames": 3, "first_model": false
+    },
+    {
+      "id": "ki_charge", "category": "skill", "frames": 40, "loop": true, "root_motion": false,
+      "phases": [{"name": "charge", "start": 0, "end": 40}],
+      "events": [{"frame": 0, "type": "aura_on", "payload": {"id": "DB_VFX_KI_CHARGE_01"}}],
+      "blend_in_frames": 4, "first_model": false
+    },
+    {
+      "id": "hurt_light", "category": "reaction", "frames": 12, "loop": false, "root_motion": false,
+      "phases": [{"name": "impact", "start": 0, "end": 2}, {"name": "recoil", "start": 2, "end": 5}, {"name": "recover", "start": 5, "end": 12}],
+      "events": [{"frame": 0, "type": "flash", "payload": {"color": "#FFFFFF", "alpha": 0.55, "frames": 1}}],
+      "blend_in_frames": 0, "first_model": true
+    },
+    {
+      "id": "hurt_heavy", "category": "reaction", "frames": 18, "loop": false, "root_motion": false,
+      "phases": [{"name": "impact", "start": 0, "end": 3}, {"name": "recoil", "start": 3, "end": 8}, {"name": "recover", "start": 8, "end": 18}],
+      "events": [
+        {"frame": 0, "type": "flash", "payload": {"color": "#FFFFFF", "alpha": 0.7, "frames": 2}},
+        {"frame": 0, "type": "shake", "payload": {"amplitude": 4, "duration_ms": 140}}
+      ],
+      "blend_in_frames": 0, "first_model": false
+    },
+    {
+      "id": "hurt_crit", "category": "reaction", "frames": 24, "loop": false, "root_motion": true,
+      "phases": [{"name": "impact", "start": 0, "end": 4}, {"name": "spin_recoil", "start": 4, "end": 11}, {"name": "recover", "start": 11, "end": 24}],
+      "events": [
+        {"frame": 0, "type": "flash", "payload": {"color": "#FFFFFF", "alpha": 0.85, "frames": 2}},
+        {"frame": 0, "type": "shake", "payload": {"amplitude": 8, "duration_ms": 220}},
+        {"frame": 0, "type": "crit_fx"}
+      ],
+      "blend_in_frames": 0, "first_model": true
+    },
+    {
+      "id": "knockback", "category": "reaction", "frames": 20, "loop": false, "root_motion": true,
+      "phases": [{"name": "impulse", "start": 0, "end": 4}, {"name": "air", "start": 4, "end": 10}, {"name": "fall", "start": 10, "end": 14}, {"name": "get_up", "start": 14, "end": 20}],
+      "events": [{"frame": 12, "type": "land"}], "blend_in_frames": 0, "first_model": false
+    },
+    {
+      "id": "death", "category": "reaction", "frames": 40, "loop": false, "root_motion": true,
+      "phases": [{"name": "impact", "start": 0, "end": 4}, {"name": "fall", "start": 4, "end": 17}, {"name": "corpse", "start": 17, "end": 27}, {"name": "fade", "start": 27, "end": 40}],
+      "events": [{"frame": 20, "type": "death"}, {"frame": 27, "type": "fade", "payload": {"alpha": 0.0}}],
+      "blend_in_frames": 0, "first_model": true
+    },
+    {
+      "id": "revive", "category": "reaction", "frames": 30, "loop": false, "root_motion": false,
+      "phases": [{"name": "appear", "start": 0, "end": 15}, {"name": "stand", "start": 15, "end": 30}],
+      "events": [{"frame": 14, "type": "revive"}], "blend_in_frames": 4, "first_model": false
+    },
+    {
+      "id": "victory", "category": "emote", "frames": 60, "loop": false, "root_motion": false,
+      "phases": [{"name": "pose", "start": 0, "end": 15}, {"name": "hold", "start": 15, "end": 31}, {"name": "idle_loop", "start": 31, "end": 60}],
+      "events": [{"frame": 14, "type": "sfx", "payload": {"id": "victory"}}], "blend_in_frames": 4, "first_model": false
+    },
+    {
+      "id": "taunt", "category": "emote", "frames": 48, "loop": false, "root_motion": false,
+      "phases": [{"name": "gesture", "start": 0, "end": 19}, {"name": "hold", "start": 19, "end": 35}, {"name": "return", "start": 35, "end": 48}],
+      "events": [], "blend_in_frames": 4, "first_model": false
+    },
+    {
+      "id": "transform_in", "category": "transformation", "frames": 48, "loop": false, "root_motion": false,
+      "phases": [{"name": "charge", "start": 0, "end": 19}, {"name": "burst", "start": 19, "end": 27}, {"name": "pose", "start": 27, "end": 48}],
+      "events": [
+        {"frame": 19, "type": "aura_on", "payload": {"id": "DB_VFX_AURA_SSJ_01"}},
+        {"frame": 19, "type": "shake", "payload": {"amplitude": 8, "duration_ms": 300}},
+        {"frame": 19, "type": "transform", "payload": {"form": "ssj1"}}
+      ],
+      "blend_in_frames": 0, "first_model": false
+    },
+    {
+      "id": "transform_out", "category": "transformation", "frames": 36, "loop": false, "root_motion": false,
+      "phases": [{"name": "dissipate", "start": 0, "end": 21}, {"name": "return", "start": 21, "end": 36}],
+      "events": [{"frame": 20, "type": "aura_off"}, {"frame": 20, "type": "transform", "payload": {"form": "base"}}],
+      "blend_in_frames": 4, "first_model": false
+    },
+    {
+      "id": "spawn", "category": "transition", "frames": 24, "loop": false, "root_motion": false,
+      "phases": [{"name": "materialize", "start": 0, "end": 15}, {"name": "land", "start": 15, "end": 24}],
+      "events": [{"frame": 14, "type": "spawn"}], "blend_in_frames": 0, "first_model": false
+    }
+  ],
+  "first_model_set": ["idle", "idle_combat", "walk", "run", "attack_light_1", "attack_whiff", "hurt_light", "hurt_crit", "death"],
+  "validation_gifs": [
+    {"id": "V01", "clip": "idle", "frames": 96, "duration_ms": 4000, "loop": true},
+    {"id": "V02", "clip": "idle_combat", "frames": 72, "duration_ms": 3000, "loop": true},
+    {"id": "V03", "clip": "walk", "frames": 24, "duration_ms": 1000, "loop": true},
+    {"id": "V04", "clip": "run", "frames": 16, "duration_ms": 667, "loop": true},
+    {"id": "V05", "clip": "turn_180", "frames": 12, "duration_ms": 500, "loop": false},
+    {"id": "V06", "clip": "jump_land", "frames": 26, "duration_ms": 1083, "loop": false},
+    {"id": "V07", "clip": "attack_light_1", "frames": 18, "duration_ms": 750, "loop": false},
+    {"id": "V08", "clip": "attack_heavy", "frames": 30, "duration_ms": 1250, "loop": false},
+    {"id": "V09", "clip": "combo_light_3", "frames": 60, "duration_ms": 2500, "loop": false},
+    {"id": "V10", "clip": "cast", "frames": 36, "duration_ms": 1500, "loop": false},
+    {"id": "V11", "clip": "attack_whiff", "frames": 20, "duration_ms": 833, "loop": false},
+    {"id": "V12", "clip": "evade_backstep", "frames": 12, "duration_ms": 500, "loop": false},
+    {"id": "V13", "clip": "attack_crit", "frames": 24, "duration_ms": 1000, "loop": false},
+    {"id": "V14", "clip": "hurt_light", "frames": 12, "duration_ms": 500, "loop": false},
+    {"id": "V15", "clip": "hurt_crit", "frames": 24, "duration_ms": 1000, "loop": false},
+    {"id": "V16", "clip": "death", "frames": 40, "duration_ms": 1667, "loop": false},
+    {"id": "V17", "clip": "block_impact+dodge", "frames": 26, "duration_ms": 1083, "loop": false},
+    {"id": "V18", "clip": "montage_combat", "frames": 120, "duration_ms": 4800, "loop": true}
+  ],
+  "hitstop_ms": {"light": 50, "heavy": 83, "crit": 133, "ultimate": 167},
+  "shake": {
+    "light": {"amplitude_px": 3, "duration_ms": 120},
+    "heavy": {"amplitude_px": 6, "duration_ms": 180},
+    "crit": {"amplitude_px": 10, "duration_ms": 260},
+    "ultimate": {"amplitude_px": 14, "duration_ms": 350}
+  },
+  "knockback_px": {"light": 6, "heavy": 18, "crit": 28},
+  "blend_defaults_frames": {
+    "idle_to_walk": 4, "walk_to_run": 3, "to_hurt": 0, "hurt_to_idle": 6,
+    "attack_to_idle": 6, "attack_to_attack": 2, "cast_to_idle": 8, "block_to_idle": 4
+  }
+}

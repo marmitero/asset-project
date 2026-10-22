@@ -1,0 +1,43 @@
+{
+  "_status": "TEMPLATE — nao preenchido. A Matriz NAO esta congelada (versao 0.0.0).",
+  "matrix_version": null,
+  "frozen_at": null,
+  "frozen_by": null,
+  "gate": "G3",
+  "project": "dragonball-aqw-asset-pack",
+  "hashes": {
+    "skeleton_humanoid": null,
+    "canvas_and_scale": null,
+    "layer_order": null,
+    "palette_master": null,
+    "clip_matrix": null,
+    "easing_library": null,
+    "naming": null,
+    "rig_schema": null,
+    "animation_schema": null,
+    "asset_manifest_schema": null,
+    "visual_bible": null
+  },
+  "frozen_values": {
+    "character_height_px": null,
+    "head_height_px": null,
+    "canvas": null,
+    "ground_y": null,
+    "center_x": null,
+    "outer_stroke_px": null,
+    "inner_stroke_px": null,
+    "back_shade": null,
+    "fps_base": null,
+    "fps_sample": null,
+    "gif_fps": null
+  },
+  "validation": {
+    "gifs_total": null,
+    "rubric_min": null,
+    "rubric_avg": null,
+    "automated": null,
+    "review": null
+  },
+  "statement": "A Matriz v1.0.0 esta congelada. Todo asset a partir desta data deve conformar-se a ela ou apresentar ADR de excecao com plano de migracao.",
+  "approved_by_user": false
+}
