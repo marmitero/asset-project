@@ -132,3 +132,60 @@ parte do "achei meio feio". Depois dele, reavaliar se ainda incomoda.
 > **Rejeitado:** gerar frames de animação por IA.
 > **Condicional:** atlas de peças por IA fica disponível como pipeline alternativo
 > (`experiments/atlas_proto/`), sem entrar no pacote canônico até o G4.
+
+---
+
+## 8. Paint pass v2 — executado (2026-10-22)
+
+Depois da decisão de manter o vetor, o paint pass v2 foi implementado. **Dois bugs
+reais do renderizador** apareceram no caminho, e ambos afetavam todo o pacote
+desde o G2:
+
+### Bug 1 — `auto_shadow` / `auto_highlight` pintavam a peça inteira
+
+A implementação deslocava a silhueta no sentido (dx,dy) e **intersectava** com a
+base. A interseção de uma silhueta com ela mesma deslocada 3 px é ~90 % da área.
+Medido num antebraço de 4.067 px: **2.447 px na cor de sombra e ZERO na cor base**.
+
+Era a causa principal do aspecto chapado e "sujo" dos membros: a cor base
+praticamente não existia.
+
+Correção: **subtração** (`base − base_deslocada(−s)`), que produz uma faixa na
+borda oposta ao deslocamento, com espessura limitada a 10 % da peça.
+
+### Bug 2 — `capsule_offset` cortava o membro ao meio
+
+`shapes.limb()` usava `capsule_offset`, que devolve uma cápsula do **mesmo
+tamanho**, só deslocada. Metade dela caía fora do membro e o `clip_fill` cortava
+reto no meio — virando uma **banda escura atravessando o braço**.
+
+Correção: `edge_band()`, que constrói a faixa rente à borda (offset para dentro,
+não cápsula deslocada).
+
+### Redesenho aplicado
+
+| Peça | Antes | Depois |
+|---|---|---|
+| crânio | 46 px estreito | +3 px por lado, mais área para o rosto |
+| olho | esclera grande + pupila mínima | íris preenche ~60 %, cílio fino, brilho |
+| sobrancelha | fundida no cílio (máscara preta) | separada por 3 px, mais fina |
+| pescoço | **não existia** | cápsula do queixo ao decote, com sombra |
+| tronco | "saco" reto | silhueta em V, decote com sombra interna, nó da faixa, 6 dobras |
+| braço | cano | deltoide com bulge, munhequeira, mão maior, rim light |
+| perna | cano | coxa com volume, topo de bota, cadarço no cano |
+| paleta | sombra 0.72 | rampa mais funda, outlines quentes, `back_darken` 0.74 |
+
+### Resultado
+
+- 23 clipes · **0 falhas** (nenhuma métrica de fluidez mudou)
+- 18 GIFs regerados (7,7 MB, eram 6,8)
+- Comparativo em escala real: `experiments/style_v2/v1_vs_v2_1x.png`
+
+O que o v2 **não** resolveu e continua em aberto:
+
+1. **braço de trás atravessa o tronco** em poses de rotação forte — problema
+   estrutural de câmera 3/4 com rig 2D (precisa de camada de oclusão por pose,
+   não de pintura);
+2. **contato de pé** em poses de passada longa ainda lê solto (o rig pisa 4–5 px
+   abaixo da linha do chão por causa do contorno);
+3. a cabeça ainda é grande para o gosto "AQW", que usa ~1/6 do corpo.

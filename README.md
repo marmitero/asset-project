@@ -4,9 +4,16 @@ Pack de sprites **modulares, com esqueleto e animação**, para construir um jog
 2D inspirado em AQW. Tudo aqui é gerado por código determinístico a partir de
 JSON — não há bitmap desenhado à mão nem arte gerada por IA.
 
-> **Estado:** Fase 2 concluída. Primeiro modelo animado e validado.
+> **Estado:** Fase 2 concluída, com **paint pass v2** aplicado.
 > Gate automático G2 ✅ · G3 (rubrica humana) em aberto · **matriz não congelada
 > (0.0.0)**.
+
+> **Novidade — direção de arte (2026-10-22):** avaliamos trocar o renderizador
+> vetorial por atlas pintado com IA. Medimos: a fluidez não muda (o rig continua
+> sendo a fonte do movimento — desvio de 0,0 px em 17.980 amostras de osso), mas
+> o recorte de arte gerada em 18 peças **falha** porque a IA não respeita as
+> proporções internas. Decisão: vetor anima, IA vai para os assets estáticos.
+> Evidência completa em [`docs/21`](dragonball-aqw-asset-pack/docs/21_ART_DIRECTION_AI_VS_VECTOR.md).
 
 ---
 
@@ -37,7 +44,7 @@ abra [`exports/review.html`](dragonball-aqw-asset-pack/exports/review.html)
 
 | Camada | Conteúdo |
 |---|---|
-| **Documentação** | 22 documentos em [`docs/`](dragonball-aqw-asset-pack/docs/) — bíblia visual, spec técnica, rig, padrão de animação, fluidez/GIF, equipamentos, VFX, mapas, UI, naming, integração, gates de QA, catálogo, blueprint do jogo, manual para IA |
+| **Documentação** | 23 documentos em [`docs/`](dragonball-aqw-asset-pack/docs/) — bíblia visual, spec técnica, rig, padrão de animação, fluidez/GIF, equipamentos, VFX, mapas, UI, naming, integração, gates de QA, catálogo, blueprint do jogo, manual para IA |
 | **Padrões** | 10 JSON em [`standards/`](dragonball-aqw-asset-pack/standards/) — esqueleto de 29 ossos, 35 clipes, 29 camadas, paleta, easing, schemas |
 | **Renderizador** | [`tools/aura/`](dragonball-aqw-asset-pack/tools/aura/) — 11 módulos: esqueleto, IK, molas, cel shading, composição, VFX, HUD |
 | **Primeiro modelo** | `DB_CHAR_HERO_GOKU_BASE` v0.1.0 — 28 peças procedurais, 10 expressões, 23 clipes |
