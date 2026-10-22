@@ -16,14 +16,16 @@ from PIL import Image, ImageChops, ImageDraw
 OUTLINE = "#0E0B12"
 
 COLORS: dict[str, str] = {
-    # Goku
-    "skin": "#F6C9A0", "skin_sh": "#D79A72", "skin_hi": "#FFE1C4",
-    "gi": "#F08A2E", "gi_sh": "#C25E16", "gi_hi": "#FFB65C",
-    "blue": "#2F4FA8", "blue_sh": "#1B2F6B", "blue_hi": "#5B7AD6",
-    "hair": "#17121C", "hair_sh": "#0B0810", "hair_hi": "#3A3244",
-    "boot_sole": "#E8D9B8", "lace": "#C0392B",
-    "eye_white": "#F7F2EA", "eye_dark": "#1A1A22", "mouth": "#7A3B32",
-    "outline": OUTLINE,
+    # Goku — rampa v2: sombra mais funda, highlight mais quente
+    "skin": "#F7C79B", "skin_sh": "#C9804F", "skin_hi": "#FFE3C4",
+    "gi": "#F2871F", "gi_sh": "#A9420D", "gi_hi": "#FFC46B",
+    "blue": "#2C4CA8", "blue_sh": "#142255", "blue_hi": "#7C9AE8",
+    "blue_deep": "#0B1338",
+    "hair": "#1A1422", "hair_sh": "#08060D", "hair_hi": "#4C4160",
+    "boot_sole": "#EFE2C4", "boot_sole_sh": "#B9A47E", "lace": "#B4302A",
+    "eye_white": "#FFFAF1", "eye_dark": "#14111A", "eye_iris": "#3D2F52",
+    "eye_lid": "#C0794E", "mouth": "#7A342B",
+    "outline": "#1A0F18",
     # cenário / UI
     "bg": "#14161C", "grid": "#2A2F3C", "ground": "#3A4150",
     "vfx_white": "#FFFFFF", "vfx_cyan": "#5CC8FF", "vfx_blue": "#1E78FF",
@@ -169,20 +171,33 @@ def build_part(part: Part) -> PartImage:
         img = Image.alpha_composite(img, layer)
         draw = ImageDraw.Draw(img)
 
-    # 2b. sombra/brilho automáticos: silhueta deslocada, recortada pela base
+    # 2b. sombra/brilho automáticos: FAIXA na borda, não a peça inteira.
+    #
+    # BUG CORRIGIDO (v1): a implementação anterior deslocava a silhueta no
+    # sentido (dx,dy) e INTERSECTAVA com a base. A interseção é quase a peça
+    # toda — media 90% da área num antebraço — então a "sombra" cobria a peça
+    # inteira e a cor base praticamente desaparecia. Era a causa principal do
+    # aspecto chapado e "sujo" dos membros.
+    #
+    # Correto: faixa no lado s = base - base_deslocada(-s). A silhueta que sai
+    # do lugar "descobre" uma faixa na borda oposta ao deslocamento.
     for op in part.ops:
         if op[0] not in ("auto_shadow", "auto_highlight"):
             continue
         _, color, dx, dy = op
+        dx_s, dy_s = int(round(-dx * S)), int(round(-dy * S))
+        # limita a espessura: um deslocamento maior que ~1/4 da peca pinta uma
+        # faixa enorme (o "highlight de 30% da coxa" que aparecia como listra clara)
+        lim = max(2, int(min(w, h) * 0.10))
+        dx_s = max(-lim, min(lim, dx_s))
+        dy_s = max(-lim, min(lim, dy_s))
         shifted = Image.new("L", (w, h), 0)
-        dx_s, dy_s = int(dx * S), int(dy * S)
-        src = base_alpha
         box = (max(0, dx_s), max(0, dy_s), min(w, w + dx_s), min(h, h + dy_s))
         crop = (max(0, -dx_s), max(0, -dy_s),
                 min(w, w - dx_s), min(h, h - dy_s))
         if box[2] > box[0] and box[3] > box[1]:
-            shifted.paste(src.crop(crop), box[:2])
-        mask = ImageChops.multiply(shifted, base_alpha)
+            shifted.paste(base_alpha.crop(crop), box[:2])
+        mask = ImageChops.subtract(base_alpha, shifted)
         layer = Image.new("RGBA", (w, h), rgba(color))
         layer.putalpha(mask)
         img = Image.alpha_composite(img, layer)

@@ -69,22 +69,46 @@ def part(name, pivot, ops, bone="", z=0, stroke=3.0):
     return Part(name=name, pivot=pivot, ops=ops, bone=bone, z=z, stroke=stroke)
 
 
+def edge_band(p0, p1, w0, w1, sgn, depth, samples=8):
+    """Faixa de sombra/brilho rente à BORDA do membro, não uma cápsula inteira.
+
+    `depth` é a espessura da faixa em px, medida da borda para dentro.
+
+    (v1 usava capsule_offset: uma cápsula do MESMO tamanho, só deslocada.
+     Metade dela caía fora do membro e o clip_fill cortava reto no meio,
+     produzindo uma banda escura atravessando o braço.)
+    """
+    dx, dy = p1[0] - p0[0], p1[1] - p0[1]
+    L = math.hypot(dx, dy) or 1.0
+    tx, ty = dx / L, dy / L
+    nx, ny = -ty, tx
+    outer, inner = [], []
+    for i in range(samples + 1):
+        t = i / samples
+        w = (w0 * (1 - t) + w1 * t) * 0.5
+        ox = p0[0] + dx * t + nx * w * sgn
+        oy = p0[1] + dy * t + ny * w * sgn
+        outer.append((ox, oy))
+        d = min(depth, w * 0.85)
+        inner.append((ox - nx * d * sgn, oy - ny * d * sgn))
+    # fecha a faixa com as pontas arredondadas
+    return outer + inner[::-1]
+
+
 def limb(cfg, side_is_front: bool):
     """Config de membro -> ops com sombra e brilho coerentes (luz de cima/frente)."""
     p0, p1 = cfg["p0"], cfg["p1"]
     w0, w1 = cfg["w0"], cfg["w1"]
     base, sh, hi = cfg["base"], cfg["sh"], cfg["hi"]
     body = capsule(p0, p1, w0, w1, cfg.get("bulge", 0.0))
-    # sombra no lado de baixo/trás
     dx, dy = p1[0] - p0[0], p1[1] - p0[1]
     L = math.hypot(dx, dy) or 1
     nx, ny = -dy / L, dx / L
     sgn = 1 if (nx > 0 or (nx == 0 and ny > 0)) else -1
     ops = [F(body, base)]
-    ops.append(SH(capsule_offset(p0, p1, w0 * 0.62, w1 * 0.62, sgn), sh))
+    ops.append(CFP(edge_band(p0, p1, w0, w1, sgn, cfg.get("sh_depth", 4.2)), sh))
     if cfg.get("highlight", True):
-        ops.append(HI(capsule_offset(p0, p1, w0 * 0.26, w1 * 0.26, -sgn,
-                                    shift=-w0 * 0.18), hi))
+        ops.append(CFP(edge_band(p0, p1, w0, w1, -sgn, cfg.get("hi_depth", 2.4)), hi))
     for ln in cfg.get("lines", []):
         ops.append(CL(ln, cfg.get("line_color", sh), cfg.get("line_w", 1.3)))
     return ops

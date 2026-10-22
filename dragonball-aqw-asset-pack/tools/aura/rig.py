@@ -17,7 +17,7 @@ BACK_SLOTS = {"upper_arm_b", "forearm_b", "hand_b", "thigh_b", "shin_b", "foot_b
 class ActorRig:
     def __init__(self, skeleton: Skeleton, parts: dict[str, PartImage],
                  layers: list[dict], secondary_cfg: dict | None = None,
-                 back_darken: float = 0.82, attachments: dict[str, str] | None = None):
+                 back_darken: float = 0.74, attachments: dict[str, str] | None = None):
         self.skel = skeleton
         self.parts = parts
         self.attachments = dict(attachments or {})
@@ -30,7 +30,7 @@ class ActorRig:
     def render(self, pose: Pose, facing: int = 1, zoom: float = 1.0,
                out_size: tuple[int, int] = (512, 512), shadow: bool = True,
                dt: float = 1 / 60, use_ik: bool = True,
-               shadow_scale: float = 1.0, shadow_alpha: int = 88,
+               shadow_scale: float = 1.0, shadow_alpha: int = 74,
                ground_clamp: bool = True) -> tuple[Image.Image, dict]:
         world = self.skel.solve(pose)
 
@@ -117,7 +117,7 @@ def _soft_shadow(canvas: Image.Image, cx: float, cy: float, rx: float, ry: float
         return
     mask = Image.new("L", (w, h), 0)
     ImageDraw.Draw(mask).ellipse([2, 2, w - 2, h - 2], fill=255)
-    mask = mask.filter(ImageFilter.GaussianBlur(max(1.0, ry * 0.55)))
+    mask = mask.filter(ImageFilter.GaussianBlur(max(2.0, ry * 0.85)))
     layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     layer.putalpha(mask.point(lambda v: int(v * alpha / 255)))
     canvas.alpha_composite(layer, (int(cx - w / 2), int(cy - h / 2)))
